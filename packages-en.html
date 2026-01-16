@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our diverse packages for Quran memorization, Hajj & Umrah, and Islamic studies at affordable prices">
+    <meta name="keywords" content="Quran memorization packages, Hajj packages, Umrah packages, Dar Al-Hidaya offers">
+    <meta name="author" content="AAA Hub">
+    <title>Packages & Offers | Dar Al-Hidaya Academy</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Dar Al-Hidaya Academy Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="services-en.html">Services</a>
+            <a href="packages-en.html" class="active">Packages</a>
+            <a href="about-en.html">About Us</a>
+            <a href="team-en.html">Our Team</a>
+            <a href="gallery-en.html">Gallery</a>
+            <a href="faq-en.html">FAQ</a>
+            <a href="contact-en.html">Contact</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('ar')" title="العربية">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support video
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>Our Packages & Offers</h1>
+            <p>Choose the right package for you and your family at the best prices</p>
+            <div class="hero-buttons">
+                <a href="#quran-packages" class="btn-primary">
+                    <i class="fas fa-book-quran"></i> Quran Packages
+                </a>
+                <a href="#hajj-packages" class="btn-secondary">
+                    <i class="fas fa-kaaba"></i> Hajj & Umrah Packages
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PACKAGES INTRODUCTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>Comprehensive and Diverse Packages</h2>
+            <p>We offer multiple options that suit your needs and budget</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; line-height: 2; color: var(--text-main); margin-bottom: 25px;">
+                At Dar Al-Hidaya Academy, we are committed to providing diverse packages suitable for all age groups and budgets. Whether you're looking to memorize the Holy Quran, perform Hajj and Umrah, or learn Islamic studies, you'll find the right package with us.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; color: var(--text-muted);">
+                All packages feature flexible pricing and schedules, with guaranteed highest quality service and follow-up.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         QURAN MEMORIZATION PACKAGES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="quran-packages">
+        <div class="section-title">
+            <h2>Quran Memorization Packages</h2>
+            <p>Flexible programs suitable for all ages and schedules</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px;">
+            
+            <!-- Package 1: Basic -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #6c757d, #495057); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Basic Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">For Beginners</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">300 EGP</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;">/month</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Two sessions per week (1 hour each)</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Certified instructor with chain</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Individual follow-up with student</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Monthly progress report</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Free Mushaf</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('Basic Package - Quran Memorization')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Subscribe Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 2: Premium -->
+            <div class="package-card" style="transform: scale(1.05); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); border: 3px solid var(--secondary);">
+                <div class="package-badge" style="position: absolute; top: -15px; left: 20px; background: var(--gradient-gold); color: white; padding: 8px 20px; border-radius: 25px; font-weight: bold; box-shadow: var(--shadow-md); z-index: 1;">
+                    Best Seller
+                </div>
+                <div class="package-header" style="background: var(--gradient-gold); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Premium Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">Most Popular</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">500 EGP</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;">/month</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Three sessions per week</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Certified instructor with chain</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Free weekly Tajweed session</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Detailed weekly report</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Free Mushaf + Tajweed book</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Entry to annual competitions</span>
+                        </li>
+                    </ul>
+                    <button class="btn-primary" onclick="requestPackage('Premium Package - Quran Memorization')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Subscribe Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Package 3: VIP -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #8e44ad, #9b59b6); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">VIP Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">For Professionals</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">800 EGP</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;">/month</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Daily sessions (5 days/week)</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Specialized certified instructor</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Intensive memorization program</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Tajweed and Ijazah lessons</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Daily reports to parents</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Comprehensive gift bag</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Priority in competitions and events</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('VIP Package - Quran Memorization')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Subscribe Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ONLINE LEARNING PACKAGES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>Online Learning Packages</h2>
+            <p>Learn from home with complete flexibility</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px;">
+            
+            <!-- Online Package 1 -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #17a2b8, #138496); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Flexible Online Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">Ideal for busy people</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">400 EGP</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;">/month</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Two sessions per week via Zoom</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Individual 1:1 sessions</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Flexible schedule 7 days/week</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Session recordings for review</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Certified certificate</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('Flexible Online Package')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Subscribe Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Online Package 2 -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #28a745, #218838); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Intensive Online Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">For fast memorization</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">650 EGP</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;">/month</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Four sessions per week</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Specialized individual sessions</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Daily homework and follow-up</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Weekly assessments</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Recorded lesson library</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Certificate + Mushaf</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('Intensive Online Package')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Subscribe Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HAJJ & UMRAH PACKAGES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="hajj-packages">
+        <div class="section-title">
+            <h2>Hajj & Umrah Packages</h2>
+            <p>Spiritual journeys with the highest levels of comfort and service</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px;">
+            
+            <!-- Hajj VIP Package -->
+            <div class="package-card">
+                <div class="package-badge" style="position: absolute; top: -15px; left: 20px; background: linear-gradient(135deg, #ff6b6b, #ee5a52); color: white; padding: 8px 20px; border-radius: 25px; font-weight: bold; box-shadow: var(--shadow-md); z-index: 1;">
+                    Best Choice
+                </div>
+                <div class="package-header" style="background: var(--gradient-gold); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Hajj VIP Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">Luxury journey with excellence</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 1.8rem; font-weight: bold;">Please Contact Us</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>5-star hotel adjacent to Holy Mosque</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Business class flight</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Scholar accompanying throughout journey</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Luxury meals 3 times daily</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Comprehensive health insurance</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>24/7 customer service</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Luxury pilgrim bag</span>
+                        </li>
+                    </ul>
+                    <button class="btn-primary" onclick="requestPackage('Hajj VIP Package')" style="width: 100%;">
+                        <i class="fas fa-phone"></i> Inquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hajj Economic Package -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #28a745, #218838); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-kaaba"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Hajj Economic Package</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">Quality at affordable prices</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 1.8rem; font-weight: bold;">Please Contact Us</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>3-4 star hotel near Holy Mosque</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Direct economy flight</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Qualified religious guidance</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Daily varied meals</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Health insurance</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Air-conditioned transport between sites</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('Hajj Economic Package')" style="width: 100%;">
+                        <i class="fas fa-phone"></i> Inquire Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Umrah Ramadan Package -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #8e44ad, #9b59b6); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Ramadan Umrah</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">Unforgettable spirituality</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">From 15,000</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;"> EGP</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Stay 7-15 nights</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Hotels near Holy Mosque</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Daily Iftar and Suhoor</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Scholar for guidance</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Comprehensive health insurance</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('Ramadan Umrah')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Year-Round Umrah Package -->
+            <div class="package-card">
+                <div class="package-header" style="background: linear-gradient(135deg, #17a2b8, #138496); padding: 30px; text-align: center; color: white; border-radius: 20px 20px 0 0;">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Year-Round Umrah</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.9;">Flexible schedule</p>
+                    <div style="margin-top: 20px;">
+                        <span style="font-size: 2.5rem; font-weight: bold;">From 8,000</span>
+                        <span style="font-size: 1.1rem; opacity: 0.9;"> EGP</span>
+                    </div>
+                </div>
+                <div class="package-body" style="padding: 35px; background: var(--bg-card); border-radius: 0 0 20px 20px;">
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Weekly trips</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Stay 3-10 days</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>3-5 star hotels</span>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Daily breakfast meal</span>
+                        </li>
+                        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px;">
+                            <i class="fas fa-check-circle" style="color: #28a745; font-size: 1.2rem;"></i>
+                            <span>Madinah visit (optional)</span>
+                        </li>
+                    </ul>
+                    <button class="btn-outline" onclick="requestPackage('Year-Round Umrah')" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Book Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         COMPARISON TABLE
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>Package Comparison</h2>
+            <p>Choose the right package for you easily</p>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; max-width: 1200px; margin: 0 auto; background: var(--bg-card); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <thead>
+                    <tr style="background: var(--gradient-primary); color: white;">
+                        <th style="padding: 20px; text-align: left; font-size: 1.1rem;">Feature</th>
+                        <th style="padding: 20px; text-align: center; font-size: 1.1rem;">Basic</th>
+                        <th style="padding: 20px; text-align: center; font-size: 1.1rem;">Premium</th>
+                        <th style="padding: 20px; text-align: center; font-size: 1.1rem;">VIP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--bg-section);">
+                        <td style="padding: 18px; font-weight: 600;">Weekly Sessions</td>
+                        <td style="padding: 18px; text-align: center;">2</td>
+                        <td style="padding: 18px; text-align: center;">3</td>
+                        <td style="padding: 18px; text-align: center;">5</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--bg-section);">
+                        <td style="padding: 18px; font-weight: 600;">Certified Instructor</td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--bg-section);">
+                        <td style="padding: 18px; font-weight: 600;">Tajweed Lessons</td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-times-circle" style="color: #dc3545; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--bg-section);">
+                        <td style="padding: 18px; font-weight: 600;">Ijazah Program</td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-times-circle" style="color: #dc3545; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-times-circle" style="color: #dc3545; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--bg-section);">
+                        <td style="padding: 18px; font-weight: 600;">Reports</td>
+                        <td style="padding: 18px; text-align: center;">Monthly</td>
+                        <td style="padding: 18px; text-align: center;">Weekly</td>
+                        <td style="padding: 18px; text-align: center;">Daily</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--bg-section);">
+                        <td style="padding: 18px; font-weight: 600;">Competitions</td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-times-circle" style="color: #dc3545; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                        <td style="padding: 18px; text-align: center;"><i class="fas fa-check-circle" style="color: #28a745; font-size: 1.3rem;"></i></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 18px; font-weight: 600;">Monthly Price</td>
+                        <td style="padding: 18px; text-align: center; font-weight: bold; color: var(--secondary);">300 EGP</td>
+                        <td style="padding: 18px; text-align: center; font-weight: bold; color: var(--secondary);">500 EGP</td>
+                        <td style="padding: 18px; text-align: center; font-weight: bold; color: var(--secondary);">800 EGP</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section style="background: var(--gradient-primary); padding: 80px 8%; text-align: center; color: white;">
+        <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">Found the Right Package?</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 40px;">Contact us now to book your spot or inquire about any package</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact-en.html" class="btn-primary">
+                <i class="fas fa-phone"></i> Contact Us Now
+            </a>
+            <a href="services-en.html" class="btn-secondary">
+                <i class="fas fa-list"></i> Browse Services
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About the Academy</h3>
+                <p>Dar Al-Hidaya Academy is a beacon of knowledge and faith, serving the Book of Allah and facilitating worship for Allah's guests for over 10 years.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index-en.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services-en.html"><i class="fas fa-hands-helping"></i> Services</a></li>
+                    <li><a href="packages-en.html"><i class="fas fa-tags"></i> Packages</a></li>
+                    <li><a href="about-en.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="team-en.html"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="contact-en.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services-en.html#quran"><i class="fas fa-book-quran"></i> Quran Memorization</a></li>
+                    <li><a href="services-en.html#tajweed"><i class="fas fa-spell-check"></i> Tajweed & Ijazah</a></li>
+                    <li><a href="services-en.html#hajj"><i class="fas fa-kaaba"></i> Hajj & Umrah</a></li>
+                    <li><a href="services-en.html#islamic"><i class="fas fa-mosque"></i> Islamic Studies</a></li>
+                    <li><a href="services-en.html#online"><i class="fas fa-laptop"></i> Online Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>All Rights Reserved &copy; 2026 Dar Al-Hidaya Academy | Designed & Developed by 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

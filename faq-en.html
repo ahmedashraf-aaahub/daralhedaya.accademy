@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about Dar Al-Hidaya Academy - Quran memorization, Hajj & Umrah, and Islamic studies">
+    <meta name="keywords" content="FAQ, frequently asked questions, Dar Al-Hidaya Academy, inquiries">
+    <meta name="author" content="AAA Hub">
+    <title>FAQ | Dar Al-Hidaya Academy</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Dar Al-Hidaya Academy Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="services-en.html">Services</a>
+            <a href="packages-en.html">Packages</a>
+            <a href="about-en.html">About Us</a>
+            <a href="team-en.html">Our Team</a>
+            <a href="gallery-en.html">Gallery</a>
+            <a href="faq-en.html" class="active">FAQ</a>
+            <a href="contact-en.html">Contact</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('ar')" title="العربية">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support video
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>Frequently Asked Questions</h1>
+            <p>Answers to the most common questions about our services and programs</p>
+            <div class="hero-buttons">
+                <a href="#faq-section" class="btn-primary">
+                    <i class="fas fa-question-circle"></i> Browse Questions
+                </a>
+                <a href="contact-en.html" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Ask a New Question
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SEARCH BOX
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-main);">
+                <i class="fas fa-search"></i> Search for Your Question
+            </h2>
+            <div style="position: relative;">
+                <input type="text" id="faqSearch" placeholder="Type a keyword to search..."
+                    style="width: 100%; padding: 18px 20px 18px 60px; border: 2px solid var(--bg-section); border-radius: 50px; font-size: 1.1rem; background: var(--bg-card); color: var(--text-main); transition: var(--transition-fast);">
+                <i class="fas fa-search" style="position: absolute; left: 25px; top: 50%; transform: translateY(-50%); font-size: 1.3rem; color: var(--text-muted);"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAQ CATEGORIES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div class="section-title">
+            <h2>Choose a Category</h2>
+            <p>Browse questions by topic</p>
+        </div>
+
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+            <button class="category-btn active" onclick="filterFAQ('all')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: var(--secondary); color: white; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-th"></i> All
+            </button>
+            <button class="category-btn" onclick="filterFAQ('quran')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-book-quran"></i> Quran Memorization
+            </button>
+            <button class="category-btn" onclick="filterFAQ('hajj')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-kaaba"></i> Hajj & Umrah
+            </button>
+            <button class="category-btn" onclick="filterFAQ('payment')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-credit-card"></i> Payment & Pricing
+            </button>
+            <button class="category-btn" onclick="filterFAQ('general')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-info-circle"></i> General
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAQ ACCORDION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="faq-section" class="section-alt">
+        <div style="max-width: 900px; margin: 0 auto;">
+
+            <!-- QURAN MEMORIZATION FAQs -->
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-right: 10px;"></i>
+                        How can I register for Quran memorization classes?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            You can easily register by contacting us via phone at <strong>01023231780</strong>, through WhatsApp, or by visiting the academy in person. Our team will welcome you and conduct a simple level assessment test to place you in the appropriate class for your level[web:35].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-right: 10px;"></i>
+                        What is the expected duration to memorize the entire Quran?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            The duration varies based on several factors: the student's age, memorization ability, daily time dedicated to memorization, and the chosen package. On average, with consistent attendance and revision, the entire Quran can be memorized in <strong>2 to 4 years</strong> for adults, and less for children[web:35][web:38].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Do the instructors hold Ijazah certifications in Quran?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes, all instructors at Dar Al-Hidaya Academy hold Ijazah certifications with connected chains (Sanad) to the Prophet Muhammad ﷺ. We have more than <strong>35 certified male and female instructors</strong> in various Qira'at and Tajweed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Can I obtain an Ijazah certification in Quran?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes, we offer special programs to obtain Ijazah certification in Quran recitation with different narrations (Hafs, Warsh, Qalon, and others) as well as Ijazah in Tajweed. Complete memorization of the Quran and mastery of recitation and Tajweed are required[web:38].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HAJJ & UMRAH FAQs -->
+            <div class="faq-item hajj" data-category="hajj" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-kaaba" style="color: var(--secondary); margin-right: 10px;"></i>
+                        What do Hajj and Umrah packages include?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Our packages include: <strong>round-trip airfare, accommodation in hotels near the Holy Mosques, transportation between sacred sites, daily meals, health insurance, guidance from a specialized religious guide, and a Hajj/Umrah kit</strong>. Details vary depending on the chosen package (Economy or VIP)[web:36].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item hajj" data-category="hajj" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-kaaba" style="color: var(--secondary); margin-right: 10px;"></i>
+                        When does registration open for the upcoming Hajj season?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Registration for Hajj typically opens <strong>8-10 months</strong> before the Hajj date. Early registration is recommended to secure the appropriate package and better prices. For Umrah, registration is available year-round with weekly departures.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item hajj" data-category="hajj" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-kaaba" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Is there medical support during the trip?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes, all our trips are fully health-insured, and we provide an <strong>accompanying medical team</strong> on Hajj trips, along with a mobile pharmacy and coordination with hospitals in the Holy Land for any emergency[web:36].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAYMENT FAQs -->
+            <div class="faq-item payment" data-category="payment" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-credit-card" style="color: var(--secondary); margin-right: 10px;"></i>
+                        What payment methods are available?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            We offer several payment methods: <strong>cash at the academy, bank transfer, Vodafone Cash, or credit cards</strong>. We also provide flexible payment plans for annual packages and Hajj trips.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item payment" data-category="payment" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-credit-card" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Can I pay in installments?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes, we offer flexible payment plans for annual packages and Hajj & Umrah packages. The amount can be divided into <strong>3 or 6 installments</strong> depending on the chosen package, with a small down payment upon registration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item payment" data-category="payment" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-credit-card" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Are there discounts for families or groups?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes! We offer <strong>special discounts for families</strong> (when registering more than two members from the same family) and group discounts (when registering 5 people or more). Discounts can reach up to <strong>15-20%</strong> depending on the number.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GENERAL FAQs -->
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 10px;"></i>
+                        What are the academy's operating hours?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            The academy operates from <strong>Saturday to Thursday from 8:00 AM to 10:00 PM</strong>, and on Friday from 9:00 AM to 12:00 PM. Customer service is available <strong>24/7</strong> via phone and WhatsApp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Is online learning available?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes, we offer <strong>online memorization programs</strong> via Zoom and Skype with high quality. You can have individual 1:1 sessions with certified instructors at flexible times that suit you, with the ability to record sessions for review[web:35][web:38].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 10px;"></i>
+                        How is student progress tracked?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            We provide <strong>periodic reports</strong> (weekly or monthly depending on the package) detailing memorization level, recitation quality, attendance, and notes. We also offer an <strong>electronic tracking app</strong> for parents to monitor their children's progress in real-time[web:35][web:38].
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-right: 10px;"></i>
+                        Is there separation between males and females?
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            Yes, the academy maintains complete separation between males and females in classes and sessions. We have <strong>specialized female instructors for sisters</strong> and separate halls, while maintaining the same level of quality and service for everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STILL HAVE QUESTIONS CTA
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div style="background: var(--gradient-primary); padding: 80px 8%; border-radius: 30px; text-align: center; color: white; box-shadow: var(--shadow-lg);">
+            <i class="fas fa-question-circle" style="font-size: 5rem; margin-bottom: 25px; opacity: 0.9;"></i>
+            <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">Didn't Find Your Answer?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.9;">
+                Our team is ready to answer all your questions. Don't hesitate to contact us
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact-en.html" class="btn-primary" style="background: white; color: var(--primary);">
+                    <i class="fas fa-envelope"></i> Send Your Question
+                </a>
+                <a href="tel:+201023231780" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/201023231780" target="_blank" class="btn-secondary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About the Academy</h3>
+                <p>Dar Al-Hidaya Academy is a beacon of knowledge and faith, serving the Book of Allah and facilitating worship for Allah's guests for over 10 years.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index-en.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services-en.html"><i class="fas fa-hands-helping"></i> Services</a></li>
+                    <li><a href="packages-en.html"><i class="fas fa-tags"></i> Packages</a></li>
+                    <li><a href="about-en.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="team-en.html"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="contact-en.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services-en.html#quran"><i class="fas fa-book-quran"></i> Quran Memorization</a></li>
+                    <li><a href="services-en.html#tajweed"><i class="fas fa-spell-check"></i> Tajweed & Ijazah</a></li>
+                    <li><a href="services-en.html#hajj"><i class="fas fa-kaaba"></i> Hajj & Umrah</a></li>
+                    <li><a href="services-en.html#islamic"><i class="fas fa-mosque"></i> Islamic Studies</a></li>
+                    <li><a href="services-en.html#online"><i class="fas fa-laptop"></i> Online Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>All Rights Reserved &copy; 2026 Dar Al-Hidaya Academy | Designed & Developed by 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- FAQ Script -->
+    <script>
+        // Toggle FAQ Answer
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.fa-chevron-down');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.fa-chevron-down');
+            
+            // Close all other answers
+            allAnswers.forEach(ans => {
+                if (ans !== answer) {
+                    ans.style.maxHeight = '0';
+                }
+            });
+            
+            // Reset all icons
+            allIcons.forEach(ic => {
+                if (ic !== icon) {
+                    ic.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current answer
+            if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Filter FAQ by Category
+        function filterFAQ(category) {
+            const items = document.querySelectorAll('.faq-item');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--text-main)';
+            });
+            event.target.style.background = 'var(--secondary)';
+            event.target.style.color = 'white';
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Search FAQ
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+            
+            items.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Question hover effect
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(q => {
+            q.addEventListener('mouseenter', function() {
+                this.style.background = 'var(--bg-section)';
+            });
+            q.addEventListener('mouseleave', function() {
+                this.style.background = 'var(--bg-card)';
+            });
+        });
+
+        // Category button hover
+        const catButtons = document.querySelectorAll('.category-btn');
+        catButtons.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                if (this.style.background !== 'var(--secondary)') {
+                    this.style.background = 'var(--bg-section)';
+                }
+            });
+            btn.addEventListener('mouseleave', function() {
+                if (this.style.background !== 'var(--secondary)') {
+                    this.style.background = 'transparent';
+                }
+            });
+        });
+
+        // Search input focus effect
+        const searchInput = document.getElementById('faqSearch');
+        searchInput.addEventListener('focus', function() {
+            this.style.borderColor = 'var(--secondary)';
+            this.style.boxShadow = '0 0 0 3px rgba(212, 175, 55, 0.1)';
+        });
+        searchInput.addEventListener('blur', function() {
+            this.style.borderColor = 'var(--bg-section)';
+            this.style.boxShadow = 'none';
+        });
+    </script>
+
+</body>
+</html>

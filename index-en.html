@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dar Al-Hidaya Academy for Quran Memorization and Hajj & Umrah services with certified instructors">
+    <meta name="keywords" content="Quran memorization, Tajweed, Hajj, Umrah, Islamic studies, Islamic academy">
+    <meta name="author" content="AAA Hub">
+    <meta property="og:title" content="Dar Al-Hidaya Academy - Quran & Islamic Studies">
+    <meta property="og:description" content="We offer Quran memorization circles with certified instructors and organized Hajj & Umrah trips">
+    <meta property="og:type" content="website">
+    <title>Dar Al-Hidaya Academy | Quran & Islamic Studies</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Dar Al-Hidaya Academy Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="index-en.html" class="active">Home</a>
+            <a href="services-en.html">Services</a>
+            <a href="packages-en.html">Packages</a>
+            <a href="about-en.html">About Us</a>
+            <a href="team-en.html">Our Team</a>
+            <a href="gallery-en.html">Gallery</a>
+            <a href="faq-en.html">FAQ</a>
+            <a href="contact-en.html">Contact</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('ar')" title="العربية">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support video
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>Dar Al-Hidaya Academy</h1>
+            <p>A Light That Guides... Teaching the Holy Quran & Serving the Guests of Allah</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">
+                    <i class="fas fa-book-quran"></i> Explore Our Services
+                </a>
+                <a href="contact-en.html" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ABOUT SECTION - WHO WE ARE
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Our mission is to spread the Holy Quran and facilitate worship for Allah's guests</p>
+        </div>
+
+        <div class="about-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+            <div class="about-text">
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary);">
+                    <i class="fas fa-mosque"></i> Our Vision
+                </h3>
+                <p style="font-size: 1.1rem; line-height: 2; color: var(--text-main); margin-bottom: 25px;">
+                    We aspire to be the leading beacon in teaching the Holy Quran and serving the guests of Allah, through solid academic curricula supervised by elite certified instructors with connected chains of transmission.
+                </p>
+                
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary);">
+                    <i class="fas fa-bullseye"></i> Our Mission
+                </h3>
+                <p style="font-size: 1.1rem; line-height: 2; color: var(--text-main); margin-bottom: 25px;">
+                    To provide distinguished Quranic education that combines authenticity and modernity, and organize accessible spiritual journeys for Hajj and Umrah with the highest standards of quality and comfort.
+                </p>
+
+                <a href="about-en.html" class="btn-outline">
+                    <i class="fas fa-info-circle"></i> Learn More
+                </a>
+            </div>
+
+            <div class="about-features">
+                <div class="feature-box" style="background: var(--bg-card); padding: 30px; border-radius: 20px; margin-bottom: 25px; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; flex-shrink: 0;">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--text-main);">Certified Instructors</h4>
+                            <p style="color: var(--text-muted);">With connected chains to the Prophet ﷺ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box" style="background: var(--bg-card); padding: 30px; border-radius: 20px; margin-bottom: 25px; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; flex-shrink: 0;">
+                            <i class="fas fa-kaaba"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--text-main);">Hajj & Umrah Trips</h4>
+                            <p style="color: var(--text-muted);">Complete packages with premium comfort</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box" style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <div style="width: 70px; height: 70px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; flex-shrink: 0;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--text-main);">All Age Groups</h4>
+                            <p style="color: var(--text-muted);">Children, youth, and adults</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STATISTICS SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-user-graduate"></i>
+                <div class="stat-number" data-target="500">0+</div>
+                <div class="stat-label">Students</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <div class="stat-number" data-target="1200">0+</div>
+                <div class="stat-label">Pilgrims</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div class="stat-number" data-target="25">0+</div>
+                <div class="stat-label">Certified Instructors</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="stat-number" data-target="10">0+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SERVICES SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>We offer diverse services to meet your religious and educational needs</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Service 1: Quran Memorization -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-book-quran"></i>
+                </div>
+                <h3>Quran Memorization</h3>
+                <p>Dedicated circles for all ages with certified instructors, in a motivating spiritual environment.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Quran Memorization')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-quran')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 2: Tajweed -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-spell-check"></i>
+                </div>
+                <h3>Tajweed & Ijazah</h3>
+                <p>Study Tajweed rules theoretically and practically, and obtain Ijazah with connected chains.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Tajweed & Ijazah')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-tajweed')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 3: Hajj & Umrah -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-kaaba"></i>
+                </div>
+                <h3>Hajj & Umrah Trips</h3>
+                <p>Organize spiritual journeys including visas, flights, and luxury accommodation.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Hajj & Umrah Trips')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-hajj')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 4: Islamic Studies -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <h3>Islamic Studies</h3>
+                <p>Lessons in Fiqh, Aqeedah, and Prophetic Biography to deepen correct religious understanding.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Islamic Studies')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-islamic')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 5: Online Learning -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Online Learning</h3>
+                <p>Flexible online circles that fit your schedule with continuous supervision from instructors.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Online Learning')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-online')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 6: Special Programs -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Competitions & Activities</h3>
+                <p>Annual competitions, recreational trips, and motivational activities for outstanding students.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Competitions & Activities')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-activities')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="services-en.html" class="btn-primary">
+                <i class="fas fa-list"></i> View All Services
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         WHY CHOOSE US
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>Why Dar Al-Hidaya Academy?</h2>
+            <p>Features that make us the ideal choice for Quran education and pilgrim services</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px;">
+            <div class="feature-card" style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main);">Certified Ijazah</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">Quranic Ijazah with connected chains to Prophet Muhammad ﷺ</p>
+            </div>
+
+            <div class="feature-card" style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main);">Flexible Schedule</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">Morning and evening circles suitable for all times</p>
+            </div>
+
+            <div class="feature-card" style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main);">Affordable Prices</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">Diverse packages suitable for all budgets</p>
+            </div>
+
+            <div class="feature-card" style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main);">Continuous Follow-up</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">Regular reports to parents about their children's progress</p>
+            </div>
+
+            <div class="feature-card" style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main);">Ideal Environment</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">Facilities equipped with latest educational tools</p>
+            </div>
+
+            <div class="feature-card" style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--text-main);">Comprehensive Care</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">Special attention to each student</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section style="background: var(--gradient-primary); padding: 80px 8%; text-align: center; color: white;">
+        <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">Start Your Spiritual Journey Today</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Join thousands of students and pilgrims who chose Dar Al-Hidaya</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact-en.html" class="btn-primary">
+                <i class="fas fa-pen"></i> Register Now
+            </a>
+            <a href="packages-en.html" class="btn-secondary">
+                <i class="fas fa-tags"></i> Browse Packages
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         MODALS - SERVICE DETAILS
+         ═══════════════════════════════════════════════════════════════════ -->
+    
+    <!-- Modal: Quran Memorization -->
+    <div class="modal" id="modal-quran">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-book-quran"></i> Quran Memorization</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>We offer specialized Quran memorization circles for all age groups:</p>
+                <ul>
+                    <li>Children circles (4-12 years): Interactive and engaging curriculum</li>
+                    <li>Youth circles (13-25 years): Memorization with Tafseer studies</li>
+                    <li>Adult circles (25+ years): Flexible programs suitable for work schedules</li>
+                    <li>Male and female instructors certified with connected chains</li>
+                    <li>Regular review and reinforcement of memorization</li>
+                    <li>Graduation ceremonies and honoring memorizers</li>
+                    <li>Certified certificates upon completion</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Quran Memorization')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Request Service Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Tajweed -->
+    <div class="modal" id="modal-tajweed">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-spell-check"></i> Tajweed & Ijazah</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Specialized programs to master Tajweed rules and obtain Ijazah:</p>
+                <ul>
+                    <li>Comprehensive theoretical study of Tajweed rules</li>
+                    <li>Practical application on correct recitation</li>
+                    <li>Ijazah in Hafs narration from Asim</li>
+                    <li>Ijazah in the Ten Qira'at (for advanced students)</li>
+                    <li>Connected chains to Prophet Muhammad ﷺ</li>
+                    <li>Certified certificates from authorized scholars</li>
+                    <li>Individual follow-up for each student</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Tajweed & Ijazah')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Request Service Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Hajj & Umrah -->
+    <div class="modal" id="modal-hajj">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-kaaba"></i> Hajj & Umrah Trips</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Organized spiritual journeys with the highest standards of quality and comfort:</p>
+                <ul>
+                    <li>Easy visa processing</li>
+                    <li>Flight bookings on the best airlines</li>
+                    <li>5-star hotels near the Holy Mosque</li>
+                    <li>Accompanied by scholars throughout the journey</li>
+                    <li>Intensive guidance and religious programs</li>
+                    <li>Luxurious and diverse meals</li>
+                    <li>Comprehensive health insurance</li>
+                    <li>24/7 customer service</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Hajj & Umrah Trips')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Book Your Trip Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Islamic Studies -->
+    <div class="modal" id="modal-islamic">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-mosque"></i> Islamic Studies</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Systematic academic lessons in various Islamic sciences:</p>
+                <ul>
+                    <li>Fiqh lessons (worship and transactions)</li>
+                    <li>Aqeedah lessons (foundations of faith)</li>
+                    <li>Prophetic Biography lessons</li>
+                    <li>Tafseer lessons (understanding Quran meanings)</li>
+                    <li>Hadith lessons</li>
+                    <li>Islamic morals and etiquette lessons</li>
+                    <li>Seasonal workshops and lectures</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Islamic Studies')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Request Service Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Online Learning -->
+    <div class="modal" id="modal-online">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-laptop"></i> Online Learning</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Learn Quran and Islamic sciences from your home:</p>
+                <ul>
+                    <li>Live online sessions</li>
+                    <li>Individual or group sessions</li>
+                    <li>Flexible times that suit your schedule</li>
+                    <li>Interactive learning platform</li>
+                    <li>Session recordings for review</li>
+                    <li>Continuous follow-up from instructors</li>
+                    <li>Regular assessments to evaluate progress</li>
+                    <li>Certified attendance certificates</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Online Learning')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Request Service Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Activities -->
+    <div class="modal" id="modal-activities">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-trophy"></i> Competitions & Activities</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Motivational and recreational programs to encourage students:</p>
+                <ul>
+                    <li>Annual Quran memorization competitions with valuable prizes</li>
+                    <li>Recreational trips for outstanding students</li>
+                    <li>Cultural and religious competitions</li>
+                    <li>Closing ceremonies and honoring events</li>
+                    <li>Social and volunteer activities</li>
+                    <li>Skills development workshops</li>
+                    <li>Seasonal exhibitions and events</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Competitions & Activities')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Request Service Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About the Academy</h3>
+                <p>Dar Al-Hidaya Academy is a beacon of knowledge and faith, serving the Book of Allah and facilitating worship for Allah's guests for over 10 years.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index-en.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services-en.html"><i class="fas fa-hands-helping"></i> Services</a></li>
+                    <li><a href="packages-en.html"><i class="fas fa-tags"></i> Packages</a></li>
+                    <li><a href="about-en.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="team-en.html"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="contact-en.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services-en.html#quran"><i class="fas fa-book-quran"></i> Quran Memorization</a></li>
+                    <li><a href="services-en.html#tajweed"><i class="fas fa-spell-check"></i> Tajweed & Ijazah</a></li>
+                    <li><a href="services-en.html#hajj"><i class="fas fa-kaaba"></i> Hajj & Umrah</a></li>
+                    <li><a href="services-en.html#islamic"><i class="fas fa-mosque"></i> Islamic Studies</a></li>
+                    <li><a href="services-en.html#online"><i class="fas fa-laptop"></i> Online Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>All Rights Reserved &copy; 2026 Dar Al-Hidaya Academy | Designed & Developed by 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

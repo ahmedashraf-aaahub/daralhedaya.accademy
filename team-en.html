@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet our distinguished team at Dar Al-Hidaya Academy - certified Quran teachers and guides">
+    <meta name="keywords" content="team, Quran teachers, instructors, Dar Al-Hidaya Academy">
+    <meta name="author" content="AAA Hub">
+    <title>Our Team | Dar Al-Hidaya Academy</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Dar Al-Hidaya Academy Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="services-en.html">Services</a>
+            <a href="packages-en.html">Packages</a>
+            <a href="about-en.html">About Us</a>
+            <a href="team-en.html" class="active">Our Team</a>
+            <a href="gallery-en.html">Gallery</a>
+            <a href="faq-en.html">FAQ</a>
+            <a href="contact-en.html">Contact</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('ar')" title="العربية">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support video
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>Our Team</h1>
+            <p>Elite certified Quran teachers and guides with the highest credentials</p>
+            <div class="hero-buttons">
+                <a href="#teachers" class="btn-primary">
+                    <i class="fas fa-users"></i> Meet the Team
+                </a>
+                <a href="contact-en.html" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Join Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         TEAM INTRO
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>Distinguished Team of Quran Scholars</h2>
+            <p>We pride ourselves on qualified and dedicated team serving the Book of Allah</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; line-height: 2; color: var(--text-main); margin-bottom: 25px;">
+                At Dar Al-Hidaya Academy, we carefully select the best instructors who hold Ijazah certifications with connected chains (Sanad) to the Prophet Muhammad ﷺ. Our team combines Islamic scholarship, practical experience, and noble character.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; color: var(--text-muted);">
+                All our team members undergo continuous training and regular supervision to ensure the highest quality of education and character development.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         TEAM STATISTICS
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+            
+            <div class="stat-card" style="background: var(--gradient-primary); padding: 40px; border-radius: 20px; text-align: center; color: white; box-shadow: var(--shadow-md);">
+                <i class="fas fa-chalkboard-teacher" style="font-size: 3.5rem; margin-bottom: 20px; opacity: 0.9;"></i>
+                <h3 style="font-size: 3rem; font-weight: bold; margin-bottom: 10px;">50+</h3>
+                <p style="font-size: 1.2rem; opacity: 0.95;">Instructors</p>
+            </div>
+
+            <div class="stat-card" style="background: var(--gradient-gold); padding: 40px; border-radius: 20px; text-align: center; color: white; box-shadow: var(--shadow-md);">
+                <i class="fas fa-award" style="font-size: 3.5rem; margin-bottom: 20px; opacity: 0.9;"></i>
+                <h3 style="font-size: 3rem; font-weight: bold; margin-bottom: 10px;">35+</h3>
+                <p style="font-size: 1.2rem; opacity: 0.95;">Certified (Ijazah)</p>
+            </div>
+
+            <div class="stat-card" style="background: linear-gradient(135deg, #28a745, #218838); padding: 40px; border-radius: 20px; text-align: center; color: white; box-shadow: var(--shadow-md);">
+                <i class="fas fa-graduation-cap" style="font-size: 3.5rem; margin-bottom: 20px; opacity: 0.9;"></i>
+                <h3 style="font-size: 3rem; font-weight: bold; margin-bottom: 10px;">15+</h3>
+                <p style="font-size: 1.2rem; opacity: 0.95;">Years Experience</p>
+            </div>
+
+            <div class="stat-card" style="background: linear-gradient(135deg, #8e44ad, #9b59b6); padding: 40px; border-radius: 20px; text-align: center; color: white; box-shadow: var(--shadow-md);">
+                <i class="fas fa-globe" style="font-size: 3.5rem; margin-bottom: 20px; opacity: 0.9;"></i>
+                <h3 style="font-size: 3rem; font-weight: bold; margin-bottom: 10px;">20+</h3>
+                <p style="font-size: 1.2rem; opacity: 0.95;">Countries Worldwide</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LEAD INSTRUCTORS
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="teachers" class="section-alt">
+        <div class="section-title">
+            <h2>Lead Instructors</h2>
+            <p>Elite certified Quran scholars</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px;">
+            
+            <!-- Teacher 1 -->
+            <div class="team-card" style="background: var(--bg-card); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="height: 300px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-user-graduate" style="font-size: 8rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.95); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; color: var(--primary);">
+                        <i class="fas fa-certificate"></i> Certified
+                    </div>
+                </div>
+                <div style="padding: 35px;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-main);">Sheikh Mohamed Ahmed</h3>
+                    <p style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-book-quran"></i> Lead Instructor
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; color: var(--text-muted); line-height: 2;">
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Ijazah in 10 Qira'at</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> 20 years teaching experience</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Al-Azhar University graduate</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Tajweed specialist</li>
+                    </ul>
+                    <a href="contact-en.html" class="btn-outline" style="width: 100%; text-align: center;">
+                        <i class="fas fa-envelope"></i> Contact Him
+                    </a>
+                </div>
+            </div>
+
+            <!-- Teacher 2 -->
+            <div class="team-card" style="background: var(--bg-card); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="height: 300px; background: linear-gradient(135deg, #8e44ad, #9b59b6); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-female" style="font-size: 8rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.95); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; color: #8e44ad;">
+                        <i class="fas fa-certificate"></i> Certified
+                    </div>
+                </div>
+                <div style="padding: 35px;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-main);">Ustadha Fatima Hassan</h3>
+                    <p style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-book-quran"></i> Lead Female Instructor
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; color: var(--text-muted); line-height: 2;">
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Ijazah in Hafs narration</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> 15 years teaching experience</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Children's memorization specialist</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Educational diploma holder</li>
+                    </ul>
+                    <a href="contact-en.html" class="btn-outline" style="width: 100%; text-align: center;">
+                        <i class="fas fa-envelope"></i> Contact Her
+                    </a>
+                </div>
+            </div>
+
+            <!-- Teacher 3 -->
+            <div class="team-card" style="background: var(--bg-card); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="height: 300px; background: linear-gradient(135deg, #28a745, #218838); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-user-tie" style="font-size: 8rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.95); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; color: #28a745;">
+                        <i class="fas fa-certificate"></i> Certified
+                    </div>
+                </div>
+                <div style="padding: 35px;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-main);">Sheikh Abdullah Youssef</h3>
+                    <p style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-mosque"></i> Religious Guide
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; color: var(--text-muted); line-height: 2;">
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Hajj & Umrah trip guide</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> 12 years guiding experience</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Shariah College graduate</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Led over 50 trips</li>
+                    </ul>
+                    <a href="contact-en.html" class="btn-outline" style="width: 100%; text-align: center;">
+                        <i class="fas fa-envelope"></i> Contact Him
+                    </a>
+                </div>
+            </div>
+
+            <!-- Teacher 4 -->
+            <div class="team-card" style="background: var(--bg-card); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="height: 300px; background: linear-gradient(135deg, #17a2b8, #138496); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-user-graduate" style="font-size: 8rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.95); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; color: #17a2b8;">
+                        <i class="fas fa-certificate"></i> Certified
+                    </div>
+                </div>
+                <div style="padding: 35px;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-main);">Sheikh Khaled Ibrahim</h3>
+                    <p style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-laptop"></i> Online Instructor
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; color: var(--text-muted); line-height: 2;">
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Ijazah in Warsh narration</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> 10 years e-learning experience</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Remote teaching specialist</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Taught over 500 students</li>
+                    </ul>
+                    <a href="contact-en.html" class="btn-outline" style="width: 100%; text-align: center;">
+                        <i class="fas fa-envelope"></i> Contact Him
+                    </a>
+                </div>
+            </div>
+
+            <!-- Teacher 5 -->
+            <div class="team-card" style="background: var(--bg-card); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="height: 300px; background: linear-gradient(135deg, #dc3545, #c82333); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-female" style="font-size: 8rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.95); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; color: #dc3545;">
+                        <i class="fas fa-certificate"></i> Certified
+                    </div>
+                </div>
+                <div style="padding: 35px;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-main);">Ustadha Aisha Mahmoud</h3>
+                    <p style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-book-quran"></i> Instructor & Trainer
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; color: var(--text-muted); line-height: 2;">
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Ijazah in Tajweed</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> 8 years experience</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Female teacher trainer</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Professional development certified</li>
+                    </ul>
+                    <a href="contact-en.html" class="btn-outline" style="width: 100%; text-align: center;">
+                        <i class="fas fa-envelope"></i> Contact Her
+                    </a>
+                </div>
+            </div>
+
+            <!-- Teacher 6 -->
+            <div class="team-card" style="background: var(--bg-card); border-radius: 25px; overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-fast);">
+                <div style="height: 300px; background: linear-gradient(135deg, #ffc107, #ff9800); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-user-tie" style="font-size: 8rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.95); padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; color: #ff9800;">
+                        <i class="fas fa-star"></i> Director
+                    </div>
+                </div>
+                <div style="padding: 35px;">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 10px; color: var(--text-main);">Mr. Ahmed Saeed</h3>
+                    <p style="color: var(--secondary); font-size: 1.1rem; margin-bottom: 20px; font-weight: 600;">
+                        <i class="fas fa-user-cog"></i> Executive Director
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 25px; color: var(--text-muted); line-height: 2;">
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Managing since 2010</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> 18 years management experience</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> MBA holder</li>
+                        <li><i class="fas fa-check-circle" style="color: #28a745; margin-right: 8px;"></i> Supervising 50+ staff</li>
+                    </ul>
+                    <a href="contact-en.html" class="btn-outline" style="width: 100%; text-align: center;">
+                        <i class="fas fa-envelope"></i> Contact Him
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         JOIN US SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div style="background: var(--gradient-primary); padding: 80px 8%; border-radius: 30px; text-align: center; color: white; box-shadow: var(--shadow-lg);">
+            <i class="fas fa-hands-helping" style="font-size: 5rem; margin-bottom: 25px; opacity: 0.9;"></i>
+            <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">Want to Join Our Team?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.9;">
+                If you're a Quran memorizer, hold an Ijazah certification, or have experience in Quran teaching, we welcome you to join the Dar Al-Hidaya Academy team. We're always looking for exceptional talent.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact-en.html" class="btn-primary" style="background: white; color: var(--primary);">
+                    <i class="fas fa-paper-plane"></i> Send Your CV
+                </a>
+                <a href="tel:+201023231780" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About the Academy</h3>
+                <p>Dar Al-Hidaya Academy is a beacon of knowledge and faith, serving the Book of Allah and facilitating worship for Allah's guests for over 10 years.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index-en.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services-en.html"><i class="fas fa-hands-helping"></i> Services</a></li>
+                    <li><a href="packages-en.html"><i class="fas fa-tags"></i> Packages</a></li>
+                    <li><a href="about-en.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="team-en.html"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="contact-en.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="services-en.html#quran"><i class="fas fa-book-quran"></i> Quran Memorization</a></li>
+                    <li><a href="services-en.html#tajweed"><i class="fas fa-spell-check"></i> Tajweed & Ijazah</a></li>
+                    <li><a href="services-en.html#hajj"><i class="fas fa-kaaba"></i> Hajj & Umrah</a></li>
+                    <li><a href="services-en.html#islamic"><i class="fas fa-mosque"></i> Islamic Studies</a></li>
+                    <li><a href="services-en.html#online"><i class="fas fa-laptop"></i> Online Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>All Rights Reserved &copy; 2026 Dar Al-Hidaya Academy | Designed & Developed by 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Team Card Hover Effects -->
+    <script>
+        const teamCards = document.querySelectorAll('.team-card');
+        teamCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px)';
+                this.style.boxShadow = 'var(--shadow-lg)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'var(--shadow-md)';
+            });
+        });
+
+        // Stats Animation on Scroll
+        const statCards = document.querySelectorAll('.stat-card');
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        statCards.forEach(card => observer.observe(card));
+    </script>
+
+</body>
+</html>

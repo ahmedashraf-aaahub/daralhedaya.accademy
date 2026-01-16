@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الأسئلة الشائعة حول أكاديمية دار الهداية - تحفيظ القرآن، الحج والعمرة، والعلوم الشرعية">
+    <meta name="keywords" content="أسئلة شائعة، FAQ، أكاديمية دار الهداية، استفسارات">
+    <meta name="author" content="AAA Hub">
+    <title>الأسئلة الشائعة | أكاديمية دار الهداية</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">جاري التحميل...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="شعار أكاديمية دار الهداية">
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="services.html">الخدمات</a>
+            <a href="packages.html">الباقات</a>
+            <a href="about.html">من نحن</a>
+            <a href="team.html">فريق العمل</a>
+            <a href="gallery.html">المعرض</a>
+            <a href="faq.html" class="active">الأسئلة الشائعة</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="تبديل الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('en')" title="English">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            المتصفح لا يدعم الفيديو
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>الأسئلة الشائعة</h1>
+            <p>إجابات على أكثر الأسئلة تكراراً حول خدماتنا وبرامجنا</p>
+            <div class="hero-buttons">
+                <a href="#faq-section" class="btn-primary">
+                    <i class="fas fa-question-circle"></i> تصفح الأسئلة
+                </a>
+                <a href="contact.html" class="btn-secondary">
+                    <i class="fas fa-phone"></i> اسأل سؤال جديد
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SEARCH BOX
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--text-main);">
+                <i class="fas fa-search"></i> ابحث عن سؤالك
+            </h2>
+            <div style="position: relative;">
+                <input type="text" id="faqSearch" placeholder="اكتب كلمة مفتاحية للبحث..."
+                    style="width: 100%; padding: 18px 60px 18px 20px; border: 2px solid var(--bg-section); border-radius: 50px; font-size: 1.1rem; background: var(--bg-card); color: var(--text-main); transition: var(--transition-fast);">
+                <i class="fas fa-search" style="position: absolute; left: 25px; top: 50%; transform: translateY(-50%); font-size: 1.3rem; color: var(--text-muted);"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAQ CATEGORIES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div class="section-title">
+            <h2>اختر الفئة</h2>
+            <p>تصفح الأسئلة حسب الموضوع</p>
+        </div>
+
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+            <button class="category-btn active" onclick="filterFAQ('all')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: var(--secondary); color: white; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-th"></i> الكل
+            </button>
+            <button class="category-btn" onclick="filterFAQ('quran')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-book-quran"></i> تحفيظ القرآن
+            </button>
+            <button class="category-btn" onclick="filterFAQ('hajj')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-kaaba"></i> الحج والعمرة
+            </button>
+            <button class="category-btn" onclick="filterFAQ('payment')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-credit-card"></i> الدفع والأسعار
+            </button>
+            <button class="category-btn" onclick="filterFAQ('general')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-info-circle"></i> عام
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAQ ACCORDION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="faq-section" class="section-alt">
+        <div style="max-width: 900px; margin: 0 auto;">
+
+            <!-- QURAN MEMORIZATION FAQs -->
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-left: 10px;"></i>
+                        كيف يمكنني التسجيل في حلقة تحفيظ القرآن؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            يمكنك التسجيل بسهولة عبر التواصل معنا هاتفياً على الرقم <strong>01023231780</strong> أو عبر واتساب، أو زيارة الأكاديمية شخصياً. سيقوم فريقنا باستقبالك وإجراء اختبار تحديد مستوى بسيط لوضعك في الحلقة المناسبة لمستواك.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-left: 10px;"></i>
+                        ما هي المدة المتوقعة لحفظ القرآن الكريم كاملاً؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            المدة تختلف حسب عدة عوامل: عمر الطالب، قدرته على الحفظ، الوقت المخصص للحفظ يومياً، والباقة المختارة. في المتوسط، مع الالتزام بالحضور والمراجعة، يمكن إتمام حفظ القرآن الكريم في فترة تتراوح بين <strong>2 إلى 4 سنوات</strong> للبالغين، وأقل للأطفال.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل المحفظون حاصلون على إجازات في القرآن؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم، جميع المحفظين في أكاديمية دار الهداية حاصلون على إجازات بأسانيد متصلة إلى رسول الله صلى الله عليه وسلم. لدينا أكثر من <strong>35 محفظ ومحفظة مجازين</strong> في القراءات المختلفة والتجويد.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item quran" data-category="quran" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-book-quran" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل يمكن الحصول على إجازة في القرآن الكريم؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم، نوفر برامج خاصة للحصول على الإجازة في القرآن الكريم بروايات مختلفة (حفص، ورش، قالون، وغيرها) وكذلك الإجازة في التجويد. يشترط إتمام حفظ القرآن الكريم كاملاً وإتقان التلاوة والتجويد.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HAJJ & UMRAH FAQs -->
+            <div class="faq-item hajj" data-category="hajj" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-kaaba" style="color: var(--secondary); margin-left: 10px;"></i>
+                        ما الذي تشمله باقات الحج والعمرة؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            تشمل باقاتنا: <strong>تذاكر الطيران ذهاب وعودة، الإقامة في فنادق قريبة من الحرمين، النقل بين المشاعر المقدسة، الوجبات اليومية، التأمين الصحي، مرافقة مرشد ديني متخصص، وحقيبة الحاج/المعتمر</strong>. تختلف التفاصيل حسب الباقة المختارة (اقتصادية أو VIP).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item hajj" data-category="hajj" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-kaaba" style="color: var(--secondary); margin-left: 10px;"></i>
+                        متى يبدأ التسجيل لموسم الحج القادم؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            عادة يبدأ التسجيل لموسم الحج قبل <strong>8-10 أشهر</strong> من موعد الحج، ويُنصح بالتسجيل المبكر لضمان الحصول على الباقة المناسبة والأسعار الأفضل. للعمرة، التسجيل متاح طوال العام مع رحلات أسبوعية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item hajj" data-category="hajj" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-kaaba" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل هناك مرافقة طبية خلال الرحلة؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم، جميع رحلاتنا مؤمنة صحياً بالكامل، ونوفر <strong>طاقم طبي مرافق</strong> في رحلات الحج، بالإضافة إلى وجود صيدلية متنقلة وتنسيق مع المستشفيات في الأراضي المقدسة لأي حالة طارئة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAYMENT FAQs -->
+            <div class="faq-item payment" data-category="payment" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-credit-card" style="color: var(--secondary); margin-left: 10px;"></i>
+                        ما هي طرق الدفع المتاحة؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نوفر عدة طرق للدفع: <strong>نقداً في الأكاديمية، تحويل بنكي، فودافون كاش، أو بطاقات الائتمان</strong>. كما نوفر خطط دفع مرنة للباقات السنوية والحج.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item payment" data-category="payment" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-credit-card" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل يمكن الدفع على أقساط؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم، نوفر خطط دفع مرنة للباقات السنوية وباقات الحج والعمرة. يمكن تقسيط المبلغ على <strong>3 أو 6 أقساط</strong> حسب الباقة المختارة، مع دفع مقدم بسيط عند التسجيل.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item payment" data-category="payment" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-credit-card" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل هناك خصومات للعائلات أو المجموعات؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم! نقدم <strong>خصومات خاصة للعائلات</strong> (عند تسجيل أكثر من فردين من نفس العائلة) وخصومات للمجموعات (عند تسجيل 5 أشخاص أو أكثر). تصل الخصومات إلى <strong>15-20%</strong> حسب العدد.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GENERAL FAQs -->
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-left: 10px;"></i>
+                        ما هي مواعيد عمل الأكاديمية؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            الأكاديمية تعمل من <strong>السبت إلى الخميس من الساعة 8:00 صباحاً حتى 10:00 مساءً</strong>، ويوم الجمعة من 9:00 صباحاً حتى 12:00 ظهراً. خدمة العملاء متاحة على مدار <strong>24 ساعة</strong> عبر الهاتف وواتساب.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل التعليم متاح عن بُعد (أونلاين)؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم، نوفر <strong>برامج تحفيظ عن بُعد</strong> عبر منصات Zoom وSkype بجودة عالية. يمكنك الحصول على حلقات فردية 1:1 مع محفظين مجازين في أوقات مرنة تناسبك، مع إمكانية تسجيل الحصص للمراجعة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-left: 10px;"></i>
+                        كيف يتم متابعة تقدم الطالب؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نوفر <strong>تقارير دورية</strong> (أسبوعية أو شهرية حسب الباقة) توضح مستوى الحفظ، جودة التلاوة، الحضور والغياب، والملاحظات. كما نوفر <strong>تطبيق متابعة إلكتروني</strong> لأولياء الأمور للاطلاع على تقدم أبنائهم لحظياً.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item general" data-category="general" style="background: var(--bg-card); margin-bottom: 20px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition-fast);">
+                <div class="faq-question" onclick="toggleFAQ(this)" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); transition: var(--transition-fast);">
+                    <h3 style="font-size: 1.3rem; color: var(--text-main); margin: 0; flex: 1;">
+                        <i class="fas fa-info-circle" style="color: var(--secondary); margin-left: 10px;"></i>
+                        هل يوجد فصل بين الذكور والإناث؟
+                    </h3>
+                    <i class="fas fa-chevron-down" style="font-size: 1.2rem; color: var(--secondary); transition: var(--transition-fast);"></i>
+                </div>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                    <div style="padding: 25px; background: var(--bg-section); border-top: 1px solid var(--bg-body);">
+                        <p style="color: var(--text-main); line-height: 1.9; margin: 0; font-size: 1.05rem;">
+                            نعم، الأكاديمية تلتزم بالفصل الكامل بين الذكور والإناث في الحلقات والفصول. لدينا <strong>محفظات متخصصات للأخوات</strong> وقاعات منفصلة، مع الحفاظ على نفس مستوى الجودة والخدمة للجميع.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STILL HAVE QUESTIONS CTA
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div style="background: var(--gradient-primary); padding: 80px 8%; border-radius: 30px; text-align: center; color: white; box-shadow: var(--shadow-lg);">
+            <i class="fas fa-question-circle" style="font-size: 5rem; margin-bottom: 25px; opacity: 0.9;"></i>
+            <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">لم تجد إجابة لسؤالك؟</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.9;">
+                فريقنا جاهز للإجابة على جميع استفساراتك. لا تتردد في التواصل معنا
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn-primary" style="background: white; color: var(--primary);">
+                    <i class="fas fa-envelope"></i> أرسل سؤالك
+                </a>
+                <a href="tel:+201023231780" class="btn-secondary">
+                    <i class="fas fa-phone"></i> اتصل بنا
+                </a>
+                <a href="https://wa.me/201023231780" target="_blank" class="btn-secondary">
+                    <i class="fab fa-whatsapp"></i> واتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن الأكاديمية</h3>
+                <p>أكاديمية دار الهداية منارة علم وإيمان، نسعى لخدمة كتاب الله وتيسير العبادة لضيوف الرحمن منذ أكثر من 10 سنوات.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="فيسبوك">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="services.html"><i class="fas fa-hands-helping"></i> الخدمات</a></li>
+                    <li><a href="packages.html"><i class="fas fa-tags"></i> الباقات</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    <li><a href="team.html"><i class="fas fa-users"></i> فريق العمل</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>خدماتنا</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#quran"><i class="fas fa-book-quran"></i> تحفيظ القرآن</a></li>
+                    <li><a href="services.html#tajweed"><i class="fas fa-spell-check"></i> التجويد والإجازات</a></li>
+                    <li><a href="services.html#hajj"><i class="fas fa-kaaba"></i> الحج والعمرة</a></li>
+                    <li><a href="services.html#islamic"><i class="fas fa-mosque"></i> العلوم الشرعية</a></li>
+                    <li><a href="services.html#online"><i class="fas fa-laptop"></i> التعليم عن بُعد</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 أكاديمية دار الهداية | تصميم وتطوير 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- FAQ Script -->
+    <script>
+        // Toggle FAQ Answer
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.fa-chevron-down');
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allIcons = document.querySelectorAll('.fa-chevron-down');
+            
+            // Close all other answers
+            allAnswers.forEach(ans => {
+                if (ans !== answer) {
+                    ans.style.maxHeight = '0';
+                }
+            });
+            
+            // Reset all icons
+            allIcons.forEach(ic => {
+                if (ic !== icon) {
+                    ic.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current answer
+            if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Filter FAQ by Category
+        function filterFAQ(category) {
+            const items = document.querySelectorAll('.faq-item');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--text-main)';
+            });
+            event.target.style.background = 'var(--secondary)';
+            event.target.style.color = 'white';
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Search FAQ
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+            
+            items.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Question hover effect
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(q => {
+            q.addEventListener('mouseenter', function() {
+                this.style.background = 'var(--bg-section)';
+            });
+            q.addEventListener('mouseleave', function() {
+                this.style.background = 'var(--bg-card)';
+            });
+        });
+
+        // Category button hover
+        const catButtons = document.querySelectorAll('.category-btn');
+        catButtons.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                if (this.style.background !== 'var(--secondary)') {
+                    this.style.background = 'var(--bg-section)';
+                }
+            });
+            btn.addEventListener('mouseleave', function() {
+                if (this.style.background !== 'var(--secondary)') {
+                    this.style.background = 'transparent';
+                }
+            });
+        });
+
+        // Search input focus effect
+        const searchInput = document.getElementById('faqSearch');
+        searchInput.addEventListener('focus', function() {
+            this.style.borderColor = 'var(--secondary)';
+            this.style.boxShadow = '0 0 0 3px rgba(212, 175, 55, 0.1)';
+        });
+        searchInput.addEventListener('blur', function() {
+            this.style.borderColor = 'var(--bg-section)';
+            this.style.boxShadow = 'none';
+        });
+    </script>
+
+</body>
+</html>

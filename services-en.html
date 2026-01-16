@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover our diverse services in Quran memorization, Tajweed, Hajj & Umrah, and Islamic studies">
+    <meta name="keywords" content="Quran memorization services, Tajweed, Ijazah, Hajj, Umrah, Islamic lessons">
+    <meta name="author" content="AAA Hub">
+    <title>Our Services | Dar Al-Hidaya Academy</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Dar Al-Hidaya Academy Logo">
+        </div>
+
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="services-en.html" class="active">Services</a>
+            <a href="packages-en.html">Packages</a>
+            <a href="about-en.html">About Us</a>
+            <a href="team-en.html">Our Team</a>
+            <a href="gallery-en.html">Gallery</a>
+            <a href="faq-en.html">FAQ</a>
+            <a href="contact-en.html">Contact</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('ar')" title="العربية">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support video
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>Our Distinguished Services</h1>
+            <p>We offer a comprehensive range of religious and educational services with the highest quality standards</p>
+            <div class="hero-buttons">
+                <a href="#services-list" class="btn-primary">
+                    <i class="fas fa-arrow-down"></i> Explore Services
+                </a>
+                <a href="contact-en.html" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SERVICES INTRODUCTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>What We Offer</h2>
+            <p>Comprehensive services combining authenticity and modernity</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.2rem; line-height: 2; color: var(--text-main); margin-bottom: 30px;">
+                At Dar Al-Hidaya Academy, we are committed to providing diverse services that meet the needs of all age groups. From Quran memorization for children and adults, to organizing Hajj and Umrah trips, to specialized Islamic studies lessons.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.9; color: var(--text-muted);">
+                All our services are provided under the supervision of elite certified instructors and scholars, in a motivating spiritual environment that combines beneficial knowledge and righteous upbringing.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         MAIN SERVICES SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="services-list">
+        <div class="section-title">
+            <h2>Our Main Services</h2>
+            <p>Choose the service that suits you and your family</p>
+        </div>
+
+        <div class="services-grid">
+            
+            <!-- Service 1: Quran Memorization for Children -->
+            <div class="service-card" id="quran-children">
+                <div class="service-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3>Quran for Children</h3>
+                <p>Interactive circles for children aged 4-12, with an engaging curriculum combining memorization and spiritual education.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Quran for Children')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-quran-children')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 2: Quran Memorization for Youth -->
+            <div class="service-card" id="quran-youth">
+                <div class="service-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3>Quran for Youth</h3>
+                <p>Specialized circles for youth aged 13-25, with Tafseer studies and verse meanings.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Quran for Youth')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-quran-youth')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 3: Quran Memorization for Adults -->
+            <div class="service-card" id="quran-adults">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Quran for Adults</h3>
+                <p>Flexible programs suitable for work and life schedules, with multiple morning and evening times.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Quran for Adults')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-quran-adults')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 4: Tajweed Studies -->
+            <div class="service-card" id="tajweed">
+                <div class="service-icon">
+                    <i class="fas fa-spell-check"></i>
+                </div>
+                <h3>Tajweed Studies</h3>
+                <p>Comprehensive study of Tajweed rules theoretically and practically with applications on correct recitation.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Tajweed Studies')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-tajweed')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 5: Ijazah Programs -->
+            <div class="service-card" id="ijazah">
+                <div class="service-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Quranic Ijazah</h3>
+                <p>Obtain Ijazah with connected chains in Hafs narration and the Ten Qira'at for advanced students.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Quranic Ijazah')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-ijazah')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 6: Hajj VIP Package -->
+            <div class="service-card" id="hajj-vip">
+                <div class="service-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <h3>Hajj VIP Package</h3>
+                <p>Luxury Hajj trip with the highest levels of comfort, 5-star hotels adjacent to the Holy Mosque with premium services.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Hajj VIP Package')">
+                        <i class="fas fa-paper-plane"></i> Book Now
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-hajj-vip')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 7: Hajj Economic Package -->
+            <div class="service-card" id="hajj-economic">
+                <div class="service-icon">
+                    <i class="fas fa-kaaba"></i>
+                </div>
+                <h3>Hajj Economic Package</h3>
+                <p>Hajj trip suitable for all budgets while maintaining service quality and comfort.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Hajj Economic Package')">
+                        <i class="fas fa-paper-plane"></i> Book Now
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-hajj-economic')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 8: Umrah Ramadan -->
+            <div class="service-card" id="umrah-ramadan">
+                <div class="service-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h3>Ramadan Umrah</h3>
+                <p>Experience the spirituality of Ramadan in the Holy Mosque with packages dedicated to the blessed month.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Ramadan Umrah')">
+                        <i class="fas fa-paper-plane"></i> Book Now
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-umrah-ramadan')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 9: Year-Round Umrah -->
+            <div class="service-card" id="umrah-year">
+                <div class="service-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Year-Round Umrah</h3>
+                <p>Various Umrah offers throughout the year with flexible dates that suit your vacations.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Year-Round Umrah')">
+                        <i class="fas fa-paper-plane"></i> Book Now
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-umrah-year')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 10: Fiqh Studies -->
+            <div class="service-card" id="fiqh">
+                <div class="service-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Fiqh Lessons</h3>
+                <p>Learn the rulings of worship and transactions according to the four schools with simplified explanation.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Fiqh Lessons')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-fiqh')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 11: Aqeedah Studies -->
+            <div class="service-card" id="aqeedah">
+                <div class="service-icon">
+                    <i class="fas fa-star-and-crescent"></i>
+                </div>
+                <h3>Aqeedah Lessons</h3>
+                <p>Study the foundations of faith and correct belief according to the methodology of Ahlus Sunnah wal Jamaah.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Aqeedah Lessons')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-aqeedah')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 12: Seerah Studies -->
+            <div class="service-card" id="seerah">
+                <div class="service-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <h3>Prophetic Biography</h3>
+                <p>Detailed journey through the life of Prophet Muhammad ﷺ from birth to death with lessons learned.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Prophetic Biography')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-seerah')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 13: Online Quran -->
+            <div class="service-card" id="online-quran">
+                <div class="service-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Online Quran</h3>
+                <p>Memorize Quran from home through live sessions with certified instructors and continuous follow-up.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Online Quran')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-online-quran')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 14: Online Islamic Studies -->
+            <div class="service-card" id="online-islamic">
+                <div class="service-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>Online Islamic Studies</h3>
+                <p>Live lessons in Fiqh, Aqeedah, and Seerah online with flexible schedules.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Online Islamic Studies')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-online-islamic')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 15: Quran Competitions -->
+            <div class="service-card" id="competitions">
+                <div class="service-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Quran Competitions</h3>
+                <p>Annual competitions in Quran memorization and recitation with valuable prizes and honoring winners.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Quran Competitions')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-competitions')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Service 16: Educational Activities -->
+            <div class="service-card" id="activities">
+                <div class="service-icon">
+                    <i class="fas fa-hiking"></i>
+                </div>
+                <h3>Recreational Activities</h3>
+                <p>Recreational trips and various educational activities for outstanding students throughout the year.</p>
+                <div class="service-buttons">
+                    <button class="btn-primary btn-small" onclick="requestService('Recreational Activities')">
+                        <i class="fas fa-paper-plane"></i> Request Service
+                    </button>
+                    <button class="btn-outline btn-small" onclick="openModal('modal-activities')">
+                        <i class="fas fa-info-circle"></i> Details
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section style="background: var(--gradient-primary); padding: 80px 8%; text-align: center; color: white;">
+        <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">Found the Right Service?</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 40px;">Contact us now and book your spot or inquire about any service</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact-en.html" class="btn-primary">
+                <i class="fas fa-phone"></i> Contact Us Now
+            </a>
+            <a href="packages-en.html" class="btn-secondary">
+                <i class="fas fa-tags"></i> Browse Packages
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         MODALS - ALL SERVICE DETAILS (16 MODALS)
+         ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- Modal 1: Quran Children -->
+    <div class="modal" id="modal-quran-children">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-child"></i> Quran for Children</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Age Group:</strong> 4 - 12 years</p>
+                <p><strong>Program Features:</strong></p>
+                <ul>
+                    <li>Interactive curriculum loved by children</li>
+                    <li>Specialized female instructors for girls</li>
+                    <li>Modern educational tools</li>
+                    <li>Motivation with prizes and certificates</li>
+                    <li>Regular reports to parents</li>
+                    <li>Accompanying recreational activities</li>
+                    <li>Annual graduation ceremonies</li>
+                </ul>
+                <p><strong>Duration:</strong> According to child's ability (flexible)</p>
+                <p><strong>Schedule:</strong> Morning and evening sessions</p>
+                <button class="btn-primary" onclick="requestService('Quran for Children')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Register Your Child Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Quran Youth -->
+    <div class="modal" id="modal-quran-youth">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-graduate"></i> Quran for Youth</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Age Group:</strong> 13 - 25 years</p>
+                <p><strong>Program Features:</strong></p>
+                <ul>
+                    <li>Quran memorization with understanding meanings</li>
+                    <li>Simplified Tafseer studies</li>
+                    <li>Application of Tajweed rules</li>
+                    <li>Separate circles for males and females</li>
+                    <li>Systematic review of memorized portions</li>
+                    <li>Preparation for obtaining Ijazah</li>
+                    <li>Accompanying educational programs</li>
+                </ul>
+                <p><strong>Duration:</strong> 2-4 years</p>
+                <button class="btn-primary" onclick="requestService('Quran for Youth')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Join the Circle
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Quran Adults -->
+    <div class="modal" id="modal-quran-adults">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-users"></i> Quran for Adults</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Age Group:</strong> 25+ years</p>
+                <p><strong>Program Features:</strong></p>
+                <ul>
+                    <li>Flexible schedule suitable for work conditions</li>
+                    <li>Morning circles after Fajr</li>
+                    <li>Evening circles after Asr and Maghrib</li>
+                    <li>Comfortable and suitable memorization pace</li>
+                    <li>Special programs for seniors</li>
+                    <li>Possibility to memorize from scratch</li>
+                    <li>Certified completion certificates</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Quran for Adults')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Start Your Journey Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Tajweed -->
+    <div class="modal" id="modal-tajweed">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-spell-check"></i> Tajweed Studies</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Course Content:</strong></p>
+                <ul>
+                    <li>Rules of Noon Sakinah and Tanween</li>
+                    <li>Rules of Meem Sakinah</li>
+                    <li>Rules of Madd (prolongation)</li>
+                    <li>Rules of Lam Sakinah</li>
+                    <li>Rules of Ra and Qalqalah</li>
+                    <li>Rules of stopping and starting</li>
+                    <li>Practical application on reading</li>
+                </ul>
+                <p><strong>Duration:</strong> 6 months</p>
+                <p><strong>Certificate:</strong> Certified by the Academy</p>
+                <button class="btn-primary" onclick="requestService('Tajweed Studies')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Register for Course
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5: Ijazah -->
+    <div class="modal" id="modal-ijazah">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-certificate"></i> Quranic Ijazah</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Types of Ijazah:</strong></p>
+                <ul>
+                    <li>Ijazah in Hafs narration from Asim</li>
+                    <li>Ijazah in Warsh narration from Nafi</li>
+                    <li>Ijazah in the Ten Minor Qira'at</li>
+                    <li>Ijazah in the Ten Major Qira'at</li>
+                </ul>
+                <p><strong>Requirements:</strong></p>
+                <ul>
+                    <li>Perfect memorization of complete Quran</li>
+                    <li>Mastery of Tajweed rules</li>
+                    <li>Passing the recitation test</li>
+                    <li>Regular attendance</li>
+                </ul>
+                <p><strong>Chain:</strong> Connected to Prophet Muhammad ﷺ</p>
+                <button class="btn-primary" onclick="requestService('Quranic Ijazah')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Request Ijazah
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6: Hajj VIP -->
+    <div class="modal" id="modal-hajj-vip">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-crown"></i> Hajj VIP Package</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Package Includes:</strong></p>
+                <ul>
+                    <li>5-star hotel adjacent to Holy Mosque in Makkah</li>
+                    <li>5-star hotel in Madinah</li>
+                    <li>Business class flight</li>
+                    <li>Hajj visa with all procedures</li>
+                    <li>Scholars accompanying throughout journey</li>
+                    <li>Luxury meals 3 times daily</li>
+                    <li>Comprehensive health insurance</li>
+                    <li>24/7 customer service</li>
+                    <li>Free pilgrim bag</li>
+                </ul>
+                <p><strong>Price:</strong> Please contact for inquiry</p>
+                <button class="btn-primary" onclick="requestService('Hajj VIP Package')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 7: Hajj Economic -->
+    <div class="modal" id="modal-hajj-economic">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-kaaba"></i> Hajj Economic Package</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Package Includes:</strong></p>
+                <ul>
+                    <li>3-4 star hotel near Holy Mosque</li>
+                    <li>Direct economy flight</li>
+                    <li>Complete Hajj visa</li>
+                    <li>Qualified religious guidance</li>
+                    <li>Daily varied meals</li>
+                    <li>Health insurance</li>
+                    <li>Air-conditioned transport between holy sites</li>
+                    <li>Complete guidance and rituals</li>
+                </ul>
+                <p><strong>Price:</strong> Please contact for inquiry</p>
+                <button class="btn-primary" onclick="requestService('Hajj Economic Package')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 8: Umrah Ramadan -->
+    <div class="modal" id="modal-umrah-ramadan">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-moon"></i> Ramadan Umrah</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Package Includes:</strong></p>
+                <ul>
+                    <li>Stay in Makkah 7-15 nights</li>
+                    <li>Hotels near Holy Mosque</li>
+                    <li>Daily Iftar at hotel</li>
+                    <li>Suhoor at Holy Mosque</li>
+                    <li>Taraweeh and Qiyam prayers</li>
+                    <li>Religious tours and visits</li>
+                    <li>Scholar accompanying throughout journey</li>
+                    <li>Comprehensive health insurance</li>
+                </ul>
+                <p><strong>Duration:</strong> 7, 10, or 15 days</p>
+                <button class="btn-primary" onclick="requestService('Ramadan Umrah')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Book Your Trip
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 9: Umrah Year -->
+    <div class="modal" id="modal-umrah-year">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-plane"></i> Year-Round Umrah</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Package Includes:</strong></p>
+                <ul>
+                    <li>Weekly trips throughout the year</li>
+                    <li>3-5 star hotels as requested</li>
+                    <li>Direct flights</li>
+                    <li>Umrah visa</li>
+                    <li>Breakfast meals</li>
+                    <li>Madinah visit (optional)</li>
+                    <li>Sightseeing tours (optional)</li>
+                </ul>
+                <p><strong>Duration:</strong> 3, 5, 7, or 10 days</p>
+                <p><strong>Prices:</strong> Starting from affordable rates</p>
+                <button class="btn-primary" onclick="requestService('Year-Round Umrah')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10: Fiqh -->
+    <div class="modal" id="modal-fiqh">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-balance-scale"></i> Fiqh Lessons</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Lesson Topics:</strong></p>
+                <ul>
+                    <li>Fiqh of purification (Wudu and Ghusl)</li>
+                    <li>Fiqh of prayer and its rulings</li>
+                    <li>Fiqh of Zakat and charity</li>
+                    <li>Fiqh of fasting and Itikaf</li>
+                    <li>Fiqh of Hajj and Umrah</li>
+                    <li>Fiqh of financial transactions</li>
+                    <li>Fiqh of family (marriage and divorce)</li>
+                </ul>
+                <p><strong>Duration:</strong> One academic year</p>
+                <p><strong>Curriculum:</strong> According to four schools</p>
+                <button class="btn-primary" onclick="requestService('Fiqh Lessons')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Join Lessons
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 11: Aqeedah -->
+    <div class="modal" id="modal-aqeedah">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-star-and-crescent"></i> Aqeedah Lessons</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Lesson Topics:</strong></p>
+                <ul>
+                    <li>Six pillars of faith</li>
+                    <li>Tawheed with its three types</li>
+                    <li>Allah's Beautiful Names and Attributes</li>
+                    <li>Belief in angels</li>
+                    <li>Belief in divine books</li>
+                    <li>Belief in prophets and messengers</li>
+                    <li>Belief in the Last Day</li>
+                    <li>Belief in divine decree</li>
+                </ul>
+                <p><strong>Methodology:</strong> Aqeedah of Ahlus Sunnah wal Jamaah</p>
+                <button class="btn-primary" onclick="requestService('Aqeedah Lessons')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Register for Lessons
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 12: Seerah -->
+    <div class="modal" id="modal-seerah">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-mosque"></i> Prophetic Biography</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Lesson Topics:</strong></p>
+                <ul>
+                    <li>Prophet's life before revelation</li>
+                    <li>Beginning of revelation and secret call</li>
+                    <li>Public call and trials</li>
+                    <li>Migration to Madinah</li>
+                    <li>Prophet's battles</li>
+                    <li>Conquest of Makkah and Farewell Hajj</li>
+                    <li>Prophet's death ﷺ</li>
+                    <li>Lessons learned from Seerah</li>
+                </ul>
+                <p><strong>Duration:</strong> 6 months</p>
+                <button class="btn-primary" onclick="requestService('Prophetic Biography')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Join Lessons
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 13: Online Quran -->
+    <div class="modal" id="modal-online-quran">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-laptop"></i> Online Quran</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Service Features:</strong></p>
+                <ul>
+                    <li>Live sessions via Zoom</li>
+                    <li>1:1 individual sessions</li>
+                    <li>Specialized certified instructors</li>
+                    <li>Flexible schedule 7 days/week</li>
+                    <li>Session recordings for review</li>
+                    <li>Regular assessments</li>
+                    <li>Monthly progress reports</li>
+                    <li>Certified certificates</li>
+                </ul>
+                <p><strong>Duration:</strong> According to student's plan</p>
+                <button class="btn-primary" onclick="requestService('Online Quran')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Start Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 14: Online Islamic -->
+    <div class="modal" id="modal-online-islamic">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-video"></i> Online Islamic Studies</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Available Lessons:</strong></p>
+                <ul>
+                    <li>Fiqh of worship (Online)</li>
+                    <li>Islamic Aqeedah (Online)</li>
+                    <li>Prophetic Biography (Online)</li>
+                    <li>Simplified Tafseer (Online)</li>
+                    <li>Hadith studies (Online)</li>
+                </ul>
+                <p><strong>Study System:</strong></p>
+                <ul>
+                    <li>Weekly live lectures</li>
+                    <li>Available recorded library</li>
+                    <li>Assignments and tests</li>
+                    <li>Certificate upon completion</li>
+                </ul>
+                <button class="btn-primary" onclick="requestService('Online Islamic Studies')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Register Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 15: Competitions -->
+    <div class="modal" id="modal-competitions">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-trophy"></i> Quran Competitions</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Types of Competitions:</strong></p>
+                <ul>
+                    <li>Juz Amma memorization competition</li>
+                    <li>5 Juz memorization competition</li>
+                    <li>10 Juz memorization competition</li>
+                    <li>Complete Quran memorization competition</li>
+                    <li>Recitation and Tajweed competition</li>
+                </ul>
+                <p><strong>Prizes:</strong></p>
+                <ul>
+                    <li>Valuable cash prizes</li>
+                    <li>Free Umrah trips</li>
+                    <li>Certificates of appreciation</li>
+                    <li>Gifts and rewards</li>
+                </ul>
+                <p><strong>Competition Date:</strong> Annually in Ramadan</p>
+                <button class="btn-primary" onclick="requestService('Quran Competitions')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Register for Competition
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 16: Activities -->
+    <div class="modal" id="modal-activities">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-hiking"></i> Recreational Activities</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Available Activities:</strong></p>
+                <ul>
+                    <li>Recreational trips for outstanding students</li>
+                    <li>Summer Quranic camps</li>
+                    <li>Visits to Islamic landmarks</li>
+                    <li>Closing ceremonies and honors</li>
+                    <li>Skills development workshops</li>
+                    <li>Sports and recreational activities</li>
+                    <li>Volunteer and charity work</li>
+                </ul>
+                <p><strong>Target Groups:</strong> All students</p>
+                <p><strong>Schedule:</strong> During school holidays</p>
+                <button class="btn-primary" onclick="requestService('Recreational Activities')" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-paper-plane"></i> Participate With Us
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About the Academy</h3>
+                <p>Dar Al-Hidaya Academy is a beacon of knowledge and faith, serving the Book of Allah and facilitating worship for Allah's guests for over 10 years.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index-en.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="services-en.html"><i class="fas fa-hands-helping"></i> Services</a></li>
+                    <li><a href="packages-en.html"><i class="fas fa-tags"></i> Packages</a></li>
+                    <li><a href="about-en.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="team-en.html"><i class="fas fa-users"></i> Our Team</a></li>
+                    <li><a href="contact-en.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#quran-children"><i class="fas fa-book-quran"></i> Quran Memorization</a></li>
+                    <li><a href="#tajweed"><i class="fas fa-spell-check"></i> Tajweed & Ijazah</a></li>
+                    <li><a href="#hajj-vip"><i class="fas fa-kaaba"></i> Hajj & Umrah</a></li>
+                    <li><a href="#fiqh"><i class="fas fa-mosque"></i> Islamic Studies</a></li>
+                    <li><a href="#online-quran"><i class="fas fa-laptop"></i> Online Learning</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>All Rights Reserved &copy; 2026 Dar Al-Hidaya Academy | Designed & Developed by 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

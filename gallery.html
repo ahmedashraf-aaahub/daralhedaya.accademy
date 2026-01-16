@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تصفح معرض صور وفيديوهات أكاديمية دار الهداية من الفعاليات والأنشطة والرحلات">
+    <meta name="keywords" content="معرض، صور، فيديوهات، فعاليات، أكاديمية دار الهداية">
+    <meta name="author" content="AAA Hub">
+    <title>المعرض | أكاديمية دار الهداية</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">جاري التحميل...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="شعار أكاديمية دار الهداية">
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="services.html">الخدمات</a>
+            <a href="packages.html">الباقات</a>
+            <a href="about.html">من نحن</a>
+            <a href="team.html">فريق العمل</a>
+            <a href="gallery.html" class="active">المعرض</a>
+            <a href="faq.html">الأسئلة الشائعة</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="تبديل الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('en')" title="English">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            المتصفح لا يدعم الفيديو
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>معرض الصور والفيديوهات</h1>
+            <p>شاهد أبرز اللحظات والفعاليات في أكاديمية دار الهداية</p>
+            <div class="hero-buttons">
+                <a href="#photos" class="btn-primary">
+                    <i class="fas fa-images"></i> الصور
+                </a>
+                <a href="#videos" class="btn-secondary">
+                    <i class="fas fa-video"></i> الفيديوهات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         GALLERY FILTERS
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>تصفح حسب الفئة</h2>
+            <p>اختر الفئة التي تريد مشاهدتها</p>
+        </div>
+
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+            <button class="filter-btn active" onclick="filterGallery('all')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: var(--secondary); color: white; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-th"></i> الكل
+            </button>
+            <button class="filter-btn" onclick="filterGallery('quran')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-book-quran"></i> تحفيظ القرآن
+            </button>
+            <button class="filter-btn" onclick="filterGallery('hajj')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-kaaba"></i> الحج والعمرة
+            </button>
+            <button class="filter-btn" onclick="filterGallery('events')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-calendar-alt"></i> الفعاليات
+            </button>
+            <button class="filter-btn" onclick="filterGallery('graduation')" style="padding: 12px 30px; border: 2px solid var(--secondary); background: transparent; color: var(--text-main); border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
+                <i class="fas fa-graduation-cap"></i> التخريج
+            </button>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PHOTO GALLERY
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="photos">
+        <div class="section-title">
+            <h2>معرض الصور</h2>
+            <p>لحظات مميزة من رحلتنا</p>
+        </div>
+
+        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+            
+            <!-- Photo 1 - Quran -->
+            <div class="gallery-item quran" data-category="quran" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-book-quran" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: var(--primary);">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">حلقة تحفيظ القرآن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">طلاب الأكاديمية في حلقة التحفيظ الصباحية</p>
+                </div>
+            </div>
+
+            <!-- Photo 2 - Hajj -->
+            <div class="gallery-item hajj" data-category="hajj" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #28a745, #218838); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-kaaba" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #28a745;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">رحلة الحج 2025</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">ضيوف الرحمن أمام الكعبة المشرفة</p>
+                </div>
+            </div>
+
+            <!-- Photo 3 - Events -->
+            <div class="gallery-item events" data-category="events" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #8e44ad, #9b59b6); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-calendar-star" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #8e44ad;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">مسابقة القرآن السنوية</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">الطلاب المشاركون في المسابقة الكبرى</p>
+                </div>
+            </div>
+
+            <!-- Photo 4 - Graduation -->
+            <div class="gallery-item graduation" data-category="graduation" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #17a2b8, #138496); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-user-graduate" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #17a2b8;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">حفل التخريج 2025</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">تكريم الحفظة المتفوقين</p>
+                </div>
+            </div>
+
+            <!-- Photo 5 - Quran -->
+            <div class="gallery-item quran" data-category="quran" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #dc3545, #c82333); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-mosque" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #dc3545;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">درس التجويد</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">الطلاب يتعلمون أحكام التجويد</p>
+                </div>
+            </div>
+
+            <!-- Photo 6 - Hajj -->
+            <div class="gallery-item hajj" data-category="hajj" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #ffc107, #ff9800); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-plane" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #ff9800;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">عمرة رمضان 2025</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">المعتمرون قبل السفر للأراضي المقدسة</p>
+                </div>
+            </div>
+
+            <!-- Photo 7 - Events -->
+            <div class="gallery-item events" data-category="events" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #20c997, #17a589); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-award" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #17a589;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">توزيع الجوائز</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">تكريم الطلاب المتميزين</p>
+                </div>
+            </div>
+
+            <!-- Photo 8 - Graduation -->
+            <div class="gallery-item graduation" data-category="graduation" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #6f42c1, #5a32a3); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-certificate" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #6f42c1;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">منح الشهادات</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">تسليم شهادات الإجازة للخريجين</p>
+                </div>
+            </div>
+
+            <!-- Photo 9 - Quran -->
+            <div class="gallery-item quran" data-category="quran" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); cursor: pointer; transition: var(--transition-fast);">
+                <div style="height: 250px; background: linear-gradient(135deg, #e83e8c, #d63384); display: flex; justify-content: center; align-items: center; position: relative;">
+                    <i class="fas fa-book-reader" style="font-size: 6rem; color: rgba(255,255,255,0.3);"></i>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.95); padding: 6px 12px; border-radius: 15px; font-size: 0.85rem; font-weight: 600; color: #e83e8c;">
+                        <i class="fas fa-image"></i> صورة
+                    </div>
+                </div>
+                <div style="padding: 20px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">برنامج التحفيظ للأطفال</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">الأطفال في دورة تحفيظ القرآن الصيفية</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         VIDEO GALLERY
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="videos" class="section-alt">
+        <div class="section-title">
+            <h2>معرض الفيديوهات</h2>
+            <p>شاهد أبرز فعالياتنا بالصوت والصورة</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px;">
+            
+            <!-- Video 1 -->
+            <div class="video-item" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="height: 220px; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;">
+                    <i class="fas fa-play-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: white;">
+                        <i class="fas fa-clock"></i> 5:30
+                    </div>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">جولة داخل الأكاديمية</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">تعرف على مرافق أكاديمية دار الهداية</p>
+                    <button class="btn-outline" style="width: 100%;">
+                        <i class="fas fa-play"></i> مشاهدة الفيديو
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-item" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="height: 220px; background: linear-gradient(135deg, #28a745, #218838); display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;">
+                    <i class="fas fa-play-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: white;">
+                        <i class="fas fa-clock"></i> 8:15
+                    </div>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">حفل ختم القرآن</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">احتفالية ختم القرآن الكريم للطلاب</p>
+                    <button class="btn-outline" style="width: 100%;">
+                        <i class="fas fa-play"></i> مشاهدة الفيديو
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-item" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="height: 220px; background: linear-gradient(135deg, #8e44ad, #9b59b6); display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;">
+                    <i class="fas fa-play-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: white;">
+                        <i class="fas fa-clock"></i> 12:40
+                    </div>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">رحلة الحج 2025</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">أجمل اللحظات من رحلة الحج المباركة</p>
+                    <button class="btn-outline" style="width: 100%;">
+                        <i class="fas fa-play"></i> مشاهدة الفيديو
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="video-item" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="height: 220px; background: linear-gradient(135deg, #17a2b8, #138496); display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;">
+                    <i class="fas fa-play-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: white;">
+                        <i class="fas fa-clock"></i> 6:20
+                    </div>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">شهادات الطلاب</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">آراء وتجارب طلاب الأكاديمية</p>
+                    <button class="btn-outline" style="width: 100%;">
+                        <i class="fas fa-play"></i> مشاهدة الفيديو
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="video-item" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="height: 220px; background: linear-gradient(135deg, #dc3545, #c82333); display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;">
+                    <i class="fas fa-play-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: white;">
+                        <i class="fas fa-clock"></i> 4:50
+                    </div>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">المسابقة السنوية</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">أفضل اللحظات من المسابقة الكبرى</p>
+                    <button class="btn-outline" style="width: 100%;">
+                        <i class="fas fa-play"></i> مشاهدة الفيديو
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video 6 -->
+            <div class="video-item" style="background: var(--bg-card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md);">
+                <div style="height: 220px; background: linear-gradient(135deg, #ffc107, #ff9800); display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;">
+                    <i class="fas fa-play-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
+                    <div style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: white;">
+                        <i class="fas fa-clock"></i> 10:30
+                    </div>
+                </div>
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--text-main);">البرنامج الصيفي</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">ملخص البرنامج الصيفي المكثف</p>
+                    <button class="btn-outline" style="width: 100%;">
+                        <i class="fas fa-play"></i> مشاهدة الفيديو
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div style="background: var(--gradient-primary); padding: 80px 8%; border-radius: 30px; text-align: center; color: white; box-shadow: var(--shadow-lg);">
+            <i class="fas fa-camera" style="font-size: 5rem; margin-bottom: 25px; opacity: 0.9;"></i>
+            <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">شارك معنا لحظاتك</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.9;">
+                إذا كان لديك صور أو فيديوهات من فعاليات الأكاديمية وترغب في مشاركتها معنا، نسعد بتواصلك
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn-primary" style="background: white; color: var(--primary);">
+                    <i class="fas fa-upload"></i> أرسل صورك
+                </a>
+                <a href="tel:+201023231780" class="btn-secondary">
+                    <i class="fas fa-phone"></i> اتصل بنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن الأكاديمية</h3>
+                <p>أكاديمية دار الهداية منارة علم وإيمان، نسعى لخدمة كتاب الله وتيسير العبادة لضيوف الرحمن منذ أكثر من 10 سنوات.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="فيسبوك">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="services.html"><i class="fas fa-hands-helping"></i> الخدمات</a></li>
+                    <li><a href="packages.html"><i class="fas fa-tags"></i> الباقات</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    <li><a href="team.html"><i class="fas fa-users"></i> فريق العمل</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>خدماتنا</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#quran"><i class="fas fa-book-quran"></i> تحفيظ القرآن</a></li>
+                    <li><a href="services.html#tajweed"><i class="fas fa-spell-check"></i> التجويد والإجازات</a></li>
+                    <li><a href="services.html#hajj"><i class="fas fa-kaaba"></i> الحج والعمرة</a></li>
+                    <li><a href="services.html#islamic"><i class="fas fa-mosque"></i> العلوم الشرعية</a></li>
+                    <li><a href="services.html#online"><i class="fas fa-laptop"></i> التعليم عن بُعد</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 أكاديمية دار الهداية | تصميم وتطوير 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Gallery Filter Script -->
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--text-main)';
+            });
+            event.target.style.background = 'var(--secondary)';
+            event.target.style.color = 'white';
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Gallery item hover effects
+        const galleryItems = document.querySelectorAll('.gallery-item, .video-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = 'var(--shadow-lg)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'var(--shadow-md)';
+            });
+        });
+
+        // Filter button hover effects
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                if (this.style.background !== 'var(--secondary)' && !this.classList.contains('active')) {
+                    this.style.background = 'var(--bg-section)';
+                }
+            });
+            btn.addEventListener('mouseleave', function() {
+                if (this.style.background !== 'var(--secondary)' && !this.classList.contains('active')) {
+                    this.style.background = 'transparent';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

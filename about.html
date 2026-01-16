@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تعرف على أكاديمية دار الهداية، رؤيتنا، رسالتنا، قيمنا، وإنجازاتنا في خدمة القرآن الكريم">
+    <meta name="keywords" content="عن أكاديمية دار الهداية، رؤيتنا، رسالتنا، قيمنا، إنجازاتنا">
+    <meta name="author" content="AAA Hub">
+    <title>من نحن | أكاديمية دار الهداية</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         LOADING SCREEN
+         ═══════════════════════════════════════════════════════════════════ -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">جاري التحميل...</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         NAVIGATION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="شعار أكاديمية دار الهداية">
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="services.html">الخدمات</a>
+            <a href="packages.html">الباقات</a>
+            <a href="about.html" class="active">من نحن</a>
+            <a href="team.html">فريق العمل</a>
+            <a href="gallery.html">المعرض</a>
+            <a href="faq.html">الأسئلة الشائعة</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-toggle" title="تبديل الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="icon-btn" onclick="switchLanguage('en')" title="English">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         HERO SECTION - VIDEO BACKGROUND
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="hero-video.mp4" type="video/mp4">
+            المتصفح لا يدعم الفيديو
+        </video>
+        
+        <div class="hero-overlay">
+            <h1>من نحن</h1>
+            <p>منارة علم وإيمان... نخدم كتاب الله ونيسّر العبادة لضيوف الرحمن</p>
+            <div class="hero-buttons">
+                <a href="#our-story" class="btn-primary">
+                    <i class="fas fa-book-open"></i> قصتنا
+                </a>
+                <a href="contact.html" class="btn-secondary">
+                    <i class="fas fa-phone"></i> انضم إلينا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         OUR STORY
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section id="our-story" class="section-alt">
+        <div class="section-title">
+            <h2>قصة التأسيس</h2>
+            <p>رحلة بدأت بحلم وتحققت بفضل الله</p>
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="background: var(--bg-card); padding: 50px; border-radius: 25px; box-shadow: var(--shadow-md); border-right: 5px solid var(--secondary);">
+                <p style="font-size: 1.2rem; line-height: 2.2; color: var(--text-main); margin-bottom: 25px;">
+                    <strong style="color: var(--secondary); font-size: 1.4rem;">في عام 2015</strong>، بدأت رحلة أكاديمية دار الهداية بحلم بسيط: أن نكون جسراً يربط الناس بكتاب الله، وأن نيسّر طريق العبادة لضيوف الرحمن.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 2; color: var(--text-main); margin-bottom: 25px;">
+                    انطلقنا بحلقة واحدة وعشرة طلاب فقط، لكن الشغف بخدمة القرآن الكريم والإخلاص في العمل كان لهما الأثر الأكبر في نمو الأكاديمية وانتشارها. اليوم، نحن نخدم أكثر من <strong style="color: var(--secondary);">500 طالب وطالبة</strong> في حلقات التحفيظ، وننظم رحلات سنوية لأكثر من <strong style="color: var(--secondary);">1000 حاج ومعتمر</strong>.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 2; color: var(--text-main); margin-bottom: 25px;">
+                    نفخر بأن لدينا <strong style="color: var(--secondary);">25 محفظاً ومحفظة مجازين</strong> بأسانيد متصلة إلى النبي محمد ﷺ، يقدمون خدماتهم التعليمية بكل إخلاص وتفانٍ. كما نفخر بشراكاتنا مع مؤسسات دينية معتمدة في مصر والسعودية.
+                </p>
+                <p style="font-size: 1.15rem; line-height: 2; color: var(--text-main);">
+                    رؤيتنا واضحة: أن نكون <strong style="color: var(--secondary);">المنارة الأولى</strong> في تعليم القرآن الكريم وخدمة ضيوف الرحمن في الوطن العربي، بمعايير عالمية تجمع بين الأصالة والتطور.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         VISION, MISSION, VALUES
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div class="section-title">
+            <h2>رؤيتنا ورسالتنا وقيمنا</h2>
+            <p>المبادئ التي نسير عليها في خدمة الدين</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+            
+            <!-- Vision -->
+            <div style="background: var(--bg-card); padding: 45px; border-radius: 25px; box-shadow: var(--shadow-md); text-align: center; border-top: 5px solid var(--secondary);">
+                <div style="width: 100px; height: 100px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; font-size: 3rem; color: white; box-shadow: var(--shadow-glow);">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary); font-family: 'Amiri', serif;">رؤيتنا</h3>
+                <p style="font-size: 1.1rem; line-height: 2; color: var(--text-main);">
+                    أن نكون المنارة الأولى في تعليم القرآن الكريم وخدمة ضيوف الرحمن في الوطن العربي، من خلال مناهج علمية رصينة ومعايير عالمية تجمع بين الأصالة والتطور، ونساهم في بناء جيل قرآني واعٍ يحمل رسالة الإسلام الحقيقية.
+                </p>
+            </div>
+
+            <!-- Mission -->
+            <div style="background: var(--bg-card); padding: 45px; border-radius: 25px; box-shadow: var(--shadow-md); text-align: center; border-top: 5px solid var(--secondary);">
+                <div style="width: 100px; height: 100px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; font-size: 3rem; color: white; box-shadow: var(--shadow-glow);">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary); font-family: 'Amiri', serif;">رسالتنا</h3>
+                <p style="font-size: 1.1rem; line-height: 2; color: var(--text-main);">
+                    تقديم تعليم قرآني متميز يجمع بين الحفظ المتقن والفهم العميق، وتنظيم رحلات إيمانية ميسرة للحج والعمرة، مع تقديم دروس شرعية شاملة تبني شخصية مسلمة متوازنة، ملتزمة بدينها، واعية بواقعها، قادرة على خدمة مجتمعها.
+                </p>
+            </div>
+
+            <!-- Values -->
+            <div style="background: var(--bg-card); padding: 45px; border-radius: 25px; box-shadow: var(--shadow-md); text-align: center; border-top: 5px solid var(--secondary);">
+                <div style="width: 100px; height: 100px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 30px; font-size: 3rem; color: white; box-shadow: var(--shadow-glow);">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--secondary); font-family: 'Amiri', serif;">قيمنا</h3>
+                <ul style="list-style: none; padding: 0; text-align: right;">
+                    <li style="font-size: 1.1rem; padding: 12px 0; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 1.3rem;"></i>
+                        <span>الإخلاص لله في كل عمل</span>
+                    </li>
+                    <li style="font-size: 1.1rem; padding: 12px 0; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 1.3rem;"></i>
+                        <span>التميز والجودة في الأداء</span>
+                    </li>
+                    <li style="font-size: 1.1rem; padding: 12px 0; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 1.3rem;"></i>
+                        <span>الأمانة والمصداقية</span>
+                    </li>
+                    <li style="font-size: 1.1rem; padding: 12px 0; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 1.3rem;"></i>
+                        <span>الاحترام والتقدير</span>
+                    </li>
+                    <li style="font-size: 1.1rem; padding: 12px 0; display: flex; align-items: center; gap: 15px;">
+                        <i class="fas fa-check-circle" style="color: var(--secondary); font-size: 1.3rem;"></i>
+                        <span>التطوير المستمر</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         ACHIEVEMENTS TIMELINE
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>إنجازاتنا عبر السنوات</h2>
+            <p>رحلة نجاح مستمرة بفضل الله</p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; position: relative;">
+            <!-- Timeline Line -->
+            <div style="position: absolute; right: 50%; top: 0; bottom: 0; width: 3px; background: var(--secondary);"></div>
+
+            <!-- Timeline Item 1 -->
+            <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative;">
+                <div style="flex: 1; text-align: left; padding-left: 50px;">
+                    <div style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">2015</h3>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">التأسيس</h4>
+                        <p style="color: var(--text-muted); line-height: 1.8;">انطلاق أكاديمية دار الهداية بحلقة واحدة و10 طلاب</p>
+                    </div>
+                </div>
+                <div style="width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; position: absolute; right: 50%; transform: translateX(50%); z-index: 1; box-shadow: 0 0 0 5px var(--bg-body);">
+                    <i class="fas fa-flag"></i>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative; flex-direction: row-reverse;">
+                <div style="flex: 1; text-align: right; padding-right: 50px;">
+                    <div style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">2017</h3>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">التوسع الأول</h4>
+                        <p style="color: var(--text-muted); line-height: 1.8;">افتتاح 5 حلقات جديدة وتخريج أول دفعة من الحفظة</p>
+                    </div>
+                </div>
+                <div style="width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; position: absolute; right: 50%; transform: translateX(50%); z-index: 1; box-shadow: 0 0 0 5px var(--bg-body);">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative;">
+                <div style="flex: 1; text-align: left; padding-left: 50px;">
+                    <div style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">2019</h3>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">خدمات الحج والعمرة</h4>
+                        <p style="color: var(--text-muted); line-height: 1.8;">إطلاق قسم تنظيم رحلات الحج والعمرة بنجاح كبير</p>
+                    </div>
+                </div>
+                <div style="width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; position: absolute; right: 50%; transform: translateX(50%); z-index: 1; box-shadow: 0 0 0 5px var(--bg-body);">
+                    <i class="fas fa-kaaba"></i>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative; flex-direction: row-reverse;">
+                <div style="flex: 1; text-align: right; padding-right: 50px;">
+                    <div style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">2021</h3>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">التعليم الإلكتروني</h4>
+                        <p style="color: var(--text-muted); line-height: 1.8;">إطلاق منصة التعليم عن بُعد لتحفيظ القرآن أونلاين</p>
+                    </div>
+                </div>
+                <div style="width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; position: absolute; right: 50%; transform: translateX(50%); z-index: 1; box-shadow: 0 0 0 5px var(--bg-body);">
+                    <i class="fas fa-laptop"></i>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative;">
+                <div style="flex: 1; text-align: left; padding-left: 50px;">
+                    <div style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">2023</h3>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">جوائز وتكريم</h4>
+                        <p style="color: var(--text-muted); line-height: 1.8;">حصول الأكاديمية على جائزة التميز في تعليم القرآن</p>
+                    </div>
+                </div>
+                <div style="width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; position: absolute; right: 50%; transform: translateX(50%); z-index: 1; box-shadow: 0 0 0 5px var(--bg-body);">
+                    <i class="fas fa-trophy"></i>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div style="display: flex; align-items: center; position: relative; flex-direction: row-reverse;">
+                <div style="flex: 1; text-align: right; padding-right: 50px;">
+                    <div style="background: var(--bg-card); padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md);">
+                        <h3 style="color: var(--secondary); font-size: 1.8rem; margin-bottom: 15px;">2026</h3>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 10px;">التوسع الإقليمي</h4>
+                        <p style="color: var(--text-muted); line-height: 1.8;">افتتاح فروع جديدة وخدمة أكثر من 500 طالب</p>
+                    </div>
+                </div>
+                <div style="width: 50px; height: 50px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; position: absolute; right: 50%; transform: translateX(50%); z-index: 1; box-shadow: 0 0 0 5px var(--bg-body);">
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         OUR APPROACH
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section>
+        <div class="section-title">
+            <h2>منهجنا التعليمي</h2>
+            <p>نتبع أحدث الأساليب التربوية في تعليم القرآن</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            
+            <div style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">التلقي والمشافهة</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">نتبع الطريقة التقليدية في التلقي المباشر من المحفظ</p>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">المراجعة المستمرة</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">نظام مراجعة دوري لتثبيت الحفظ وعدم نسيانه</p>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">الفهم والتدبر</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">ربط الحفظ بفهم المعاني والتدبر في الآيات</p>
+            </div>
+
+            <div style="background: var(--bg-card); padding: 35px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-md);">
+                <div style="width: 80px; height: 80px; background: var(--gradient-gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px; font-size: 2.5rem; color: white;">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--text-main);">التقييم الدوري</h3>
+                <p style="color: var(--text-muted); line-height: 1.8;">اختبارات منتظمة لقياس مستوى التقدم والإتقان</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STATISTICS SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="stats-section">
+        <div class="section-title">
+            <h2 style="color: white;">أرقام تتحدث عن نفسها</h2>
+            <p style="color: rgba(255,255,255,0.8);">إنجازات نفخر بها ونسعى لمضاعفتها</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <i class="fas fa-user-graduate"></i>
+                <div class="stat-number" data-target="500">0+</div>
+                <div class="stat-label">طالب وطالبة</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <div class="stat-number" data-target="1200">0+</div>
+                <div class="stat-label">حاج ومعتمر</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div class="stat-number" data-target="25">0+</div>
+                <div class="stat-label">محفظ مجاز</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <div class="stat-number" data-target="150">0+</div>
+                <div class="stat-label">حافظ متخرج</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="stat-number" data-target="10">0+</div>
+                <div class="stat-label">سنوات خبرة</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-certificate"></i>
+                <div class="stat-number" data-target="80">0+</div>
+                <div class="stat-label">إجازة ممنوحة</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PARTNERSHIPS
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section-alt">
+        <div class="section-title">
+            <h2>شراكاتنا واعتماداتنا</h2>
+            <p>نفخر بشراكاتنا مع مؤسسات دينية معتمدة</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: var(--bg-card); padding: 45px; border-radius: 25px; box-shadow: var(--shadow-md); text-align: center;">
+                <ul style="list-style: none; padding: 0;">
+                    <li style="font-size: 1.2rem; padding: 20px; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 20px;">
+                        <i class="fas fa-handshake" style="color: var(--secondary); font-size: 2rem;"></i>
+                        <span>شراكة مع الأزهر الشريف - مصر</span>
+                    </li>
+                    <li style="font-size: 1.2rem; padding: 20px; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 20px;">
+                        <i class="fas fa-handshake" style="color: var(--secondary); font-size: 2rem;"></i>
+                        <span>اعتماد من وزارة الأوقاف المصرية</span>
+                    </li>
+                    <li style="font-size: 1.2rem; padding: 20px; border-bottom: 1px solid var(--bg-section); display: flex; align-items: center; gap: 20px;">
+                        <i class="fas fa-handshake" style="color: var(--secondary); font-size: 2rem;"></i>
+                        <span>شراكة مع شركات الحج والعمرة المعتمدة</span>
+                    </li>
+                    <li style="font-size: 1.2rem; padding: 20px; display: flex; align-items: center; gap: 20px;">
+                        <i class="fas fa-handshake" style="color: var(--secondary); font-size: 2rem;"></i>
+                        <span>عضوية الاتحاد العالمي لحفظة القرآن</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CTA SECTION
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section style="background: var(--gradient-primary); padding: 80px 8%; text-align: center; color: white;">
+        <h2 style="font-family: 'Amiri', serif; font-size: 3rem; margin-bottom: 20px;">هل أنت مستعد للانضمام إلينا؟</h2>
+        <p style="font-size: 1.3rem; margin-bottom: 40px;">كن جزءاً من عائلة دار الهداية واحفظ القرآن الكريم</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-pen"></i> سجل الآن
+            </a>
+            <a href="team.html" class="btn-secondary">
+                <i class="fas fa-users"></i> تعرف على فريقنا
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ═══════════════════════════════════════════════════════════════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن الأكاديمية</h3>
+                <p>أكاديمية دار الهداية منارة علم وإيمان، نسعى لخدمة كتاب الله وتيسير العبادة لضيوف الرحمن منذ أكثر من 10 سنوات.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1ByHibZ3Ei/" target="_blank" class="social-icon" title="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1BeixxAM49/" target="_blank" class="social-icon" title="فيسبوك">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/201023231780" target="_blank" class="social-icon" title="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="services.html"><i class="fas fa-hands-helping"></i> الخدمات</a></li>
+                    <li><a href="packages.html"><i class="fas fa-tags"></i> الباقات</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    <li><a href="team.html"><i class="fas fa-users"></i> فريق العمل</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>خدماتنا</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html#quran"><i class="fas fa-book-quran"></i> تحفيظ القرآن</a></li>
+                    <li><a href="services.html#tajweed"><i class="fas fa-spell-check"></i> التجويد والإجازات</a></li>
+                    <li><a href="services.html#hajj"><i class="fas fa-kaaba"></i> الحج والعمرة</a></li>
+                    <li><a href="services.html#islamic"><i class="fas fa-mosque"></i> العلوم الشرعية</a></li>
+                    <li><a href="services.html#online"><i class="fas fa-laptop"></i> التعليم عن بُعد</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201023231780">01023231780</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+201118330582">01118330582</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:anawbs028@gmail.com">anawbs028@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 أكاديمية دار الهداية | تصميم وتطوير 
+                <a href="https://aaahub.online" target="_blank">AAA Hub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
